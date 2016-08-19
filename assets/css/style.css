@@ -73,7 +73,15 @@ p {
     margin-top: 50px;
 }
 
+.stretch {
+    width: 100%;
+}
+
 .text-emphasis {
     font-family: inherit;
     font-weight: bold;
+}
+
+.text-inline {
+    display: inline;
 }
