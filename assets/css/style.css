@@ -50,6 +50,22 @@ p {
     width: 6em;
 }
 
+.button {
+    border: 1px solid #444;
+    color: #444;
+    font-family: inherit;
+    font-weight: bold;
+    display: inline;
+    padding: 12px;
+    transition: all .2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #444;
+    color: white;
+    text-decoration: none;
+}
+
 .center {
     width: 100%;
     position: absolute;
@@ -70,8 +86,13 @@ p {
     margin-left: 20px;
 }
 
-.spacer {
-    margin-top: 50px;
+.spacer-horizontal {
+    display: inline;
+    margin-left: 15px;
+}
+
+.spacer-vertical {
+    margin-top: 30px;
 }
 
 .stretch {
