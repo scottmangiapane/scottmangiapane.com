@@ -25,6 +25,7 @@ h1 {
 
 header {
     height: 100vh;
+    background-color: white;
     background-size: cover;
     position: relative;
 }
@@ -58,6 +59,7 @@ p {
 
 .icon {
     color: #444;
+    font-size: 24px;
 }
 
 .icon:hover {
@@ -83,4 +85,8 @@ p {
 
 .text-inline {
     display: inline;
+}
+
+.title {
+    font-size: 60px;
 }
