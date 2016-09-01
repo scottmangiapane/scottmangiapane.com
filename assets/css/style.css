@@ -26,8 +26,8 @@ h1 {
 }
 
 header {
+    width: 100vw;
     height: 100vh;
-    background-color: white;
     background-size: cover;
     position: relative;
 }
@@ -52,6 +52,11 @@ p {
     width: 6em;
 }
 
+.block {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
 .button {
     border: 1px solid #767676;
     border-radius: 2px;
@@ -65,7 +70,26 @@ p {
     transition: all .2s ease-in-out;
 }
 
-.button:hover {
+.button:active {
+    background-color: #ff7c7c;
+    border: 1px solid #ff7c7c;
+    box-shadow: 0 3px 5px 0 #bbb;
+    -moz-box-shadow: 0 3px 5px 0 #bbb;
+    -webkit-box-shadow: 0 3px 5px 0 #bbb;
+    color: white;
+    text-decoration: none;
+    transform: translate(0, -1px);
+    -ms-transform: translate(0, -1px);
+    -webkit-transform: translate(0, -1px);
+    transition: all .1s ease-in-out;
+}
+
+.button:focus:not(:active) {
+    color: #767676;
+    text-decoration: none;
+}
+
+.button:hover:not(:active) {
     background-color: #ff6868;
     border: 1px solid #ff6868;
     box-shadow: 0 5px 8px 0 #ccc;
@@ -89,10 +113,13 @@ p {
 .icon {
     color: #444;
     font-size: 24px;
+    transition: all .2s ease-in-out;
 }
 
 .icon:hover {
-    color: #767676;
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 
 .progress {
