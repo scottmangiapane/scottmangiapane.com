@@ -53,6 +53,12 @@ p {
 }
 
 .button {
+    border: 1px solid #767676;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #767676;
+    display: inline-block;
     font-family: inherit;
     font-weight: bold;
     padding: 12px;
@@ -60,8 +66,16 @@ p {
 }
 
 .button:hover {
+    background-color: #ff6868;
+    border: 1px solid #ff6868;
+    box-shadow: 0 5px 8px 0 #ccc;
+    -moz-box-shadow: 0 5px 8px 0 #ccc;
+    -webkit-box-shadow: 0 5px 8px 0 #ccc;
     color: white;
     text-decoration: none;
+    transform: translate(0, -2px);
+    -ms-transform: translate(0, -2px);
+    -webkit-transform: translate(0, -2px);
 }
 
 .center {
@@ -99,6 +113,7 @@ p {
 }
 
 .text-emphasis {
+    color: inherit;
     font-family: inherit;
     font-weight: bold;
 }
