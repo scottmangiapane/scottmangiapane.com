@@ -57,49 +57,30 @@ p {
     padding-top: 50px;
 }
 
-.button {
-    border: 1px solid #767676;
-    border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    color: #767676;
+.button, .button:focus:not(:active) {
+    background-color: #eee;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: #444;
     display: inline-block;
     font-family: inherit;
     font-weight: bold;
     padding: 12px;
+    text-decoration: none;
     transition: all .2s ease-in-out;
 }
 
 .button:active {
-    background-color: #ff7c7c;
-    border: 1px solid #ff7c7c;
-    box-shadow: 0 3px 5px 0 #bbb;
-    -moz-box-shadow: 0 3px 5px 0 #bbb;
-    -webkit-box-shadow: 0 3px 5px 0 #bbb;
+    background-color: #222;
     color: white;
-    text-decoration: none;
-    transform: translate(0, -1px);
-    -ms-transform: translate(0, -1px);
-    -webkit-transform: translate(0, -1px);
-    transition: all .1s ease-in-out;
-}
-
-.button:focus:not(:active) {
-    color: #767676;
     text-decoration: none;
 }
 
 .button:hover:not(:active) {
-    background-color: #ff6868;
-    border: 1px solid #ff6868;
-    box-shadow: 0 5px 8px 0 #ccc;
-    -moz-box-shadow: 0 5px 8px 0 #ccc;
-    -webkit-box-shadow: 0 5px 8px 0 #ccc;
+    background-color: #666;
     color: white;
     text-decoration: none;
-    transform: translate(0, -2px);
-    -ms-transform: translate(0, -2px);
-    -webkit-transform: translate(0, -2px);
 }
 
 .center {
