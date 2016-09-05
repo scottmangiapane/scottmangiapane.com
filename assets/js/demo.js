@@ -4,6 +4,8 @@ $(document).ready(function () {
     var app_qc = $('#quackcryption');
     var demo = $('#demo-overlay');
 
+    demo.attr("src", demo.attr("src").replace("enable-js.svg", "calculator-v2.svg"));
+
     app_ca.hover(function () {
         var src = demo.attr("src")
             .replace("card-cliques.svg", "calculator-v2.svg")
