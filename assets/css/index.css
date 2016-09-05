@@ -5,19 +5,5 @@
 #demo-overlay {
     width: 82%;
     height: 82%;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    -moz-transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%);
     z-index: 10;
-}
-
-#demo-wrapper * {
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
 }
