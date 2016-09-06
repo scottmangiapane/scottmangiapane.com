@@ -62,6 +62,11 @@ p {
     text-align: right;
 }
 
+.android {
+    display: inline-block;
+    margin: 0 10%;
+}
+
 .badge {
     background: none;
     display: inline-block;
@@ -152,6 +157,11 @@ p {
     transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+.center-col-vertical {
+    align-items: center;
+    display: flex;
 }
 
 .demo {
