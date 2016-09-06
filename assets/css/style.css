@@ -13,8 +13,12 @@ body {
     height: 100%;
 }
 
+footer {
+    padding: 35px 0;
+}
+
 footer p {
-    margin: 35px 0;
+    margin: 0;
 }
 
 h1 {
@@ -264,6 +268,14 @@ p {
 }
 
 @media (max-width: 767px) {
+    footer p {
+        text-align: center;
+    }
+
+    footer .align-right {
+        text-align: center;
+    }
+
     .card:hover {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -278,5 +290,15 @@ p {
     .button {
         width: 100%;
         text-align: center;
+    }
+
+    .button:hover:not(:active) {
+        background-color: #66BB6A;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
     }
 }
