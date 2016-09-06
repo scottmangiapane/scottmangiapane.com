@@ -13,8 +13,8 @@ body {
     height: 100%;
 }
 
-footer {
-    padding: 35px 0;
+footer p {
+    margin: 35px 0;
 }
 
 h1 {
