@@ -40,6 +40,10 @@ html {
     background-color: #fafafa;
 }
 
+img {
+    display: inline-block;
+}
+
 main {
     background-color: white;
 }
