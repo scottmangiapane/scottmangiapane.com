@@ -1,29 +1,46 @@
 $(document).ready(function () {
-    var app_ca = $('#calculator-v2');
-    var app_cc = $('#card-cliques');
-    var app_qc = $('#quackcryption');
-    var demo = $('#demo-overlay');
+    var demo_js = $('#demo-enable-js');
+    var demo_ca = $('#demo-calculator-v2');
+    var demo_cc = $('#demo-card-cliques');
+    var demo_qc = $('#demo-quackcryption');
 
-    demo.attr("src", demo.attr("src").replace("enable-js.svg", "calculator-v2.svg"));
+    demo_js.css({opacity: 1}).animate({opacity: 0});
+    demo_cc.css({opacity: 1}).animate({opacity: 0});
+    demo_qc.css({opacity: 1}).animate({opacity: 0});
 
-    app_ca.hover(function () {
-        var src = demo.attr("src")
-            .replace("card-cliques.svg", "calculator-v2.svg")
-            .replace("quackcryption.svg", "calculator-v2.svg");
-        demo.attr("src", src);
+    $('#card-calculator-v2').hover(function () {
+        demo_ca.animate({
+            opacity: 1
+        }, {duration: 200, queue: false});
+        demo_cc.animate({
+            opacity: 0
+        }, {duration: 200, queue: false});
+        demo_qc.animate({
+            opacity: 0
+        }, {duration: 200, queue: false});
     });
 
-    app_cc.hover(function () {
-        var src = demo.attr("src")
-            .replace("calculator-v2.svg", "card-cliques.svg")
-            .replace("quackcryption.svg", "card-cliques.svg");
-        demo.attr("src", src);
+    $('#card-card-cliques').hover(function () {
+        demo_ca.animate({
+            opacity: 0
+        }, {duration: 200, queue: false});
+        demo_cc.animate({
+            opacity: 1
+        }, {duration: 200, queue: false});
+        demo_qc.animate({
+            opacity: 0
+        }, {duration: 200, queue: false});
     });
 
-    app_qc.hover(function () {
-        var src = demo.attr("src")
-            .replace("calculator-v2.svg", "quackcryption.svg")
-            .replace("card-cliques.svg", "quackcryption.svg");
-        demo.attr("src", src);
+    $('#card-quackcryption').hover(function () {
+        demo_ca.animate({
+            opacity: 0
+        }, {duration: 200, queue: false});
+        demo_cc.animate({
+            opacity: 0
+        }, {duration: 200, queue: false});
+        demo_qc.animate({
+            opacity: 1
+        }, {duration: 200, queue: false});
     });
 });
