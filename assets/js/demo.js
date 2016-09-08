@@ -4,9 +4,11 @@ $(document).ready(function () {
     var demo_cc = $('#demo-card-cliques');
     var demo_qc = $('#demo-quackcryption');
 
-    demo_js.css({opacity: 0});
     demo_cc.css({opacity: 0});
     demo_qc.css({opacity: 0});
+    demo_js.animate({
+        opacity: 0
+    }, {duration: 200, queue: false});
 
     $('#card-calculator-v2').hover(function () {
         demo_ca.animate({
