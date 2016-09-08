@@ -36,10 +36,14 @@ header {
 
 header h1 {
     animation: fade-down 1s;
+    -moz-animation: fade-down 1s;
+    -webkit-animation: fade-down 1s;
 }
 
 header .symbol-down {
     animation: fade-up 1s;
+    -moz-animation: fade-up 1s;
+    -webkit-animation: fade-up 1s;
 }
 
 html {
@@ -215,9 +219,15 @@ p {
     justify-content: center;
 }
 
+.slide {
+    opacity: 0;
+}
+
 .slide-animation {
     animation: slide 0.4s;
-    visibility: visible;
+    -moz-animation: slide 0.4s;
+    -webkit-animation: slide 0.4s;
+    opacity: 1;
 }
 
 .spacer-horizontal {
@@ -439,6 +449,16 @@ p {
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -webkit-transform: scale(1);
+    }
+
+    .slide {
+        opacity: 1;
+    }
+
+    .slide-animation {
+        animation: slide 0s;
+        -moz-animation: slide 0s;
+        -webkit-animation: slide 0s;
     }
 }
 
