@@ -198,6 +198,20 @@ p {
     margin: 0 auto;
 }
 
+.flex {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-flex-align: center;
+    justify-content: center;
+}
+
 .progress {
     margin-left: 20px;
 }
