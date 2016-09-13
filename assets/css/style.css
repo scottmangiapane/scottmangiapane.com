@@ -210,13 +210,13 @@ p {
 
 .popup {
     width: 280px;
-    background-color: #222;
+    background-color: #009688;
     border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.10), 0 3px 3px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.10), 0 3px 3px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.10), 0 3px 3px rgba(0, 0, 0, 0.22);
     display: inline-block;
     left: calc(50% - 140px);
     margin: 12px 0;
@@ -224,7 +224,11 @@ p {
     padding: 16px;
     position: absolute;
     text-align: center;
-    top: 35px;
+    top: 25px;
+    transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: all .2s ease-in-out;
@@ -237,6 +241,10 @@ p {
 .popup-wrapper .button:hover ~ .popup {
     opacity: 1;
     top: 45px;
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
 }
 
 .popup * {
