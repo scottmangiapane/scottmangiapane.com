@@ -96,6 +96,8 @@ p {
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
 }
 
 .button:active {
@@ -131,6 +133,8 @@ p {
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
 }
 
 .card:hover {
@@ -224,13 +228,15 @@ p {
     position: absolute;
     text-align: center;
     top: 20px;
-    transform: scale(0.8) translateX(10%);
-    -moz-transform: scale(0.8) translateX(10%);
-    -ms-transform: scale(0.8) translateX(10%);
-    -webkit-transform: scale(0.8) translateX(10%);
+    transform: scale(0.6) translateX(30%);
+    -moz-transform: scale(0.6) translateX(30%);
+    -ms-transform: scale(0.6) translateX(30%);
+    -webkit-transform: scale(0.6) translateX(30%);
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
 }
 
 .popup * {
@@ -299,6 +305,8 @@ p {
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
 }
 
 .symbol-down:hover {
@@ -509,7 +517,12 @@ p {
     }
 
     .popup {
-        display: none;
+        left: 0;
+        right: auto;
+        transform: scale(0.6) translateX(-30%);
+        -moz-transform: scale(0.6) translateX(-30%);
+        -ms-transform: scale(0.6) translateX(-30%);
+        -webkit-transform: scale(0.6) translateX(-30%);
     }
 
     .slide {
@@ -538,5 +551,9 @@ p {
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -webkit-transform: scale(1);
+    }
+
+    .popup {
+        display: none;
     }
 }
