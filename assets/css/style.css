@@ -112,10 +112,10 @@ p {
     -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.10), 0 3px 3px rgba(0, 0, 0, 0.22);
     color: white;
     text-decoration: none;
-    transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
+    transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -webkit-transform: scale(1.08);
 }
 
 .card {
@@ -151,7 +151,7 @@ p {
     border-radius: 2px 2px 0 0;
     -moz-border-radius: 2px 2px 0 0;
     -webkit-border-radius: 2px 2px 0 0;
-    margin: -16px -16px 16px -16px;
+    margin: -14px -14px 14px -14px;
     padding: 16px;
 }
 
@@ -189,8 +189,36 @@ p {
 
 .demo-overlay {
     width: 84%;
-    height: 84%;
+    height: 78.5%;
     z-index: 10;
+}
+
+.demo-overlay-github {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    z-index: 20;
+}
+
+.demo-overlay-github .demo-overlay-github-logo {
+    transform: scale(1.3);
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+.demo-overlay-github:hover {
+    opacity: 1;
+}
+
+.demo-overlay-github:hover .demo-overlay-github-logo {
+    transform: scale(1);
+}
+
+.demo-overlay-github-logo {
+    width: 8em;
 }
 
 .demo-wrapper {
@@ -267,6 +295,10 @@ p {
 
 .remove-margins {
     margin: 0;
+}
+
+.require-js {
+    display: none;
 }
 
 .row-center {
