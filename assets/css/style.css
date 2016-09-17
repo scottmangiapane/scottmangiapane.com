@@ -193,34 +193,6 @@ p {
     z-index: 10;
 }
 
-.demo-overlay-github {
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    z-index: 20;
-}
-
-.demo-overlay-github .demo-overlay-github-logo {
-    transform: scale(1.3);
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-}
-
-.demo-overlay-github:hover {
-    opacity: 1;
-}
-
-.demo-overlay-github:hover .demo-overlay-github-logo {
-    transform: scale(1);
-}
-
-.demo-overlay-github-logo {
-    width: 8em;
-}
-
 .demo-wrapper {
     width: 68%;
     margin: 0 auto;
