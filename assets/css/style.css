@@ -36,7 +36,6 @@ img {
 
 main {
     background-color: white;
-    overflow: scroll;
 }
 
 p {
@@ -303,7 +302,6 @@ p {
 .scroll-icon {
     width: 2em;
     height: 2em;
-    bottom: 50px;
     color: #444;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
@@ -315,7 +313,7 @@ p {
 .scroll-wrapper {
     width: 2em;
     height: 2em;
-    bottom: 20px;
+    bottom: 50px;
     left: 50%;
     position: absolute;
     transform: translate(-50%, 0);
