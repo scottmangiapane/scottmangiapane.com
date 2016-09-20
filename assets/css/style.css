@@ -28,6 +28,7 @@ header {
     animation: bounce 1s;
     -moz-animation: bounce 1s;
     -webkit-animation: bounce 1s;
+    background: #5289c5;
 }
 
 img {
@@ -283,10 +284,10 @@ p {
     justify-content: center;
 }
 
-.scroll-background {
+.scroll-background-small, .scroll-background-large {
     width: 50%;
     height: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -322,12 +323,23 @@ p {
     -webkit-transform: translate(-50%, 0);
 }
 
-.scroll-wrapper:hover .scroll-background {
+.scroll-wrapper:hover .scroll-background-small {
     opacity: 1;
-    transform: scale(3);
-    -moz-transform: scale(3);
-    -ms-transform: scale(3);
-    -webkit-transform: scale(3);
+    transform: scale(4);
+    -moz-transform: scale(4);
+    -ms-transform: scale(4);
+    -webkit-transform: scale(4);
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+
+.scroll-wrapper:hover .scroll-background-large {
+    opacity: 1;
+    transform: scale(5);
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    -webkit-transform: scale(5);
 }
 
 .slide {
@@ -373,11 +385,8 @@ p {
 }
 
 .title {
-    font-size: 60px;
-}
-
-.title-small {
-    font-size: 30px;
+    font-size: 100px;
+    font-weight: 900;
 }
 
 @keyframes bounce {
@@ -514,6 +523,10 @@ p {
     .demo-wrapper {
         width: 100%;
     }
+
+    .title {
+        font-size: 80px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -556,6 +569,10 @@ p {
         animation: slide 0s;
         -moz-animation: slide 0s;
         -webkit-animation: slide 0s;
+    }
+
+    .title {
+        font-size: 60px;
     }
 }
 
