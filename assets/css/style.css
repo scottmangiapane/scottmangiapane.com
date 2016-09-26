@@ -286,10 +286,6 @@ p {
     margin: 0;
 }
 
-.require-js {
-    display: none;
-}
-
 .row-center {
     display: flex;
     flex-direction: column;
@@ -565,6 +561,10 @@ p {
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -webkit-transform: scale(1);
+    }
+
+    .container {
+        max-width: 500px;
     }
 
     .popup {
