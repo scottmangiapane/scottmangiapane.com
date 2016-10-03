@@ -1,3 +1,0 @@
-## scottmangiapane.com
-
-![](screenshot.png)
