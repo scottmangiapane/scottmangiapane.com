@@ -28,8 +28,8 @@ h1, h2, h3 {
 
 h1, h2, h3, h4, h5, h6 {
     color: inherit;
-    font-family: 'Abel', sans-serif;
-    font-weight: 500;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
     line-height: 1.1;
 }
 
@@ -412,7 +412,7 @@ p {
 .text-emphasis {
     color: inherit;
     font-family: inherit;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .text-inline {
@@ -428,8 +428,8 @@ p {
 }
 
 .title {
-    font-size: 100px;
-    font-weight: 900;
+    font-size: 88px;
+    font-weight: 600;
 }
 
 @keyframes bounce {
