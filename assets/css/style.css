@@ -180,8 +180,20 @@ p {
     background-color: #2196f3;
 }
 
+.card-color-green {
+    background-color: #8bc34a;
+}
+
+.card-color-purple {
+    background-color: #9C27B0;
+}
+
 .card-color-red {
     background-color: #f44336;
+}
+
+.card-color-teal {
+    background-color: #009688;
 }
 
 .card-color-yellow {
@@ -208,14 +220,29 @@ p {
     margin: 12px 0;
 }
 
-.demo-overlay {
+.demo-overlay-android {
     width: 84%;
     height: 78.5%;
     z-index: 10;
 }
 
-.demo-wrapper {
+.demo-overlay-js {
+    width: 94%;
+    z-index: 10;
+}
+
+.demo-wrapper-android {
     width: 65%;
+    margin: 0 auto;
+}
+
+.demo-wrapper-js {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.demo-wrapper-rpi {
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -397,7 +424,7 @@ p {
 }
 
 .tint {
-    background-color: #fafafa;
+    background-color: #f8f8f8;
 }
 
 .title {
@@ -490,14 +517,36 @@ p {
         width: 100%;
     }
 
-    .demo-wrapper {
+    .demo-wrapper-android {
         width: 78%;
+        margin: 0 auto;
+    }
+
+    .demo-wrapper-js {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .demo-wrapper-rpi {
+        width: 88%;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 991px) {
-    .demo-wrapper {
+    .demo-wrapper-android {
         width: 100%;
+        margin: 0 auto;
+    }
+
+    .demo-wrapper-js {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .demo-wrapper-rpi {
+        width: 100%;
+        margin: 0 auto;
     }
 
     .title {
