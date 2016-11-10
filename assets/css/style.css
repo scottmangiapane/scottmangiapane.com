@@ -229,10 +229,10 @@ p {
 .demo-overlay-js {
     width: 93%;
     position: absolute;
-    transform: translate(-50%, -46.3%);
-    -moz-transform: translate(-50%, -46.3%);
-    -ms-transform: translate(-50%, -46.3%);
-    -webkit-transform: translate(-50%, -46.3%);
+    transform: translate(-50%, -46%);
+    -moz-transform: translate(-50%, -46%);
+    -ms-transform: translate(-50%, -46%);
+    -webkit-transform: translate(-50%, -46%);
     z-index: -10;
 }
 
@@ -379,7 +379,7 @@ p {
 .scroll-wrapper {
     width: 2em;
     height: 2em;
-    bottom: 50px;
+    bottom: 40px;
     left: 50%;
     position: absolute;
     transform: translate(-50%, 0);
@@ -439,7 +439,7 @@ p {
 }
 
 .title {
-    font-size: 88px;
+    font-size: 95px;
     font-weight: 600;
 }
 
@@ -612,7 +612,7 @@ p {
     }
 
     .title {
-        font-size: 60px;
+        font-size: 58px;
     }
 }
 
@@ -639,5 +639,11 @@ p {
 
     .scroll-background-small, .scroll-background-large {
         display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        font-size: 48px;
     }
 }
