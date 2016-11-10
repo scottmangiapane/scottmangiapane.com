@@ -244,7 +244,7 @@ p {
 }
 
 .demo-wrapper-js {
-    width: 74%;
+    width: 70%;
     margin: 0 auto;
     position: relative;
     z-index: 0;
@@ -255,6 +255,15 @@ p {
     margin: 0 auto;
     position: relative;
     z-index: 0;
+}
+
+.emoji {
+    height: 20px;
+    display: inline;
+    transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
 }
 
 .fade-down {
@@ -280,6 +289,10 @@ p {
 .fill-screen {
     width: 100%;
     height: 100%;
+}
+
+.inline, .inline * {
+    display: inline;
 }
 
 .popup {
@@ -340,7 +353,7 @@ p {
     position: relative;
 }
 
-.remove-margins {
+.remove-margins, .remove-margins * {
     margin: 0;
 }
 
@@ -424,10 +437,6 @@ p {
     color: inherit;
     font-family: inherit;
     font-weight: bolder;
-}
-
-.text-inline {
-    display: inline;
 }
 
 .text-white {
@@ -534,7 +543,7 @@ p {
     }
 
     .demo-wrapper-js {
-        width: 89%;
+        width: 84%;
         margin: 0 auto;
     }
 
