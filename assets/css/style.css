@@ -222,28 +222,39 @@ p {
 
 .demo-overlay-android {
     width: 84%;
-    height: 78.5%;
+    position: absolute;
     z-index: 10;
 }
 
 .demo-overlay-js {
-    width: 94%;
-    z-index: 10;
+    width: 93%;
+    position: absolute;
+    transform: translate(-50%, -46.3%);
+    -moz-transform: translate(-50%, -46.3%);
+    -ms-transform: translate(-50%, -46.3%);
+    -webkit-transform: translate(-50%, -46.3%);
+    z-index: -10;
 }
 
 .demo-wrapper-android {
     width: 65%;
     margin: 0 auto;
+    position: relative;
+    z-index: 0;
 }
 
 .demo-wrapper-js {
-    width: 90%;
+    width: 74%;
     margin: 0 auto;
+    position: relative;
+    z-index: 0;
 }
 
 .demo-wrapper-rpi {
     width: 75%;
     margin: 0 auto;
+    position: relative;
+    z-index: 0;
 }
 
 .fade-down {
@@ -412,7 +423,7 @@ p {
 .text-emphasis {
     color: inherit;
     font-family: inherit;
-    font-weight: 400;
+    font-weight: bolder;
 }
 
 .text-inline {
@@ -523,7 +534,7 @@ p {
     }
 
     .demo-wrapper-js {
-        width: 100%;
+        width: 89%;
         margin: 0 auto;
     }
 
