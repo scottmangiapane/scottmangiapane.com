@@ -66,9 +66,9 @@ img {
 
 main {
     background-color: white;
-    box-shadow: 0 -25px 25px rgba(0, 0, 0, 0.10), 0 -10px 10px rgba(0, 0, 0, 0.22);
-    -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.10), 0 0 20px rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.10), 0 0 20px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.14), 0 0 20px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 0 0 25px rgba(0, 0, 0, 0.14), 0 0 20px rgba(0, 0, 0, 0.26);
+    -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.14), 0 0 20px rgba(0, 0, 0, 0.26);
 }
 
 p {
