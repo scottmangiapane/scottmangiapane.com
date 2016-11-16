@@ -17,7 +17,6 @@ body {
 
 footer {
     padding: 35px 0;
-    z-index: 5;
 }
 
 h1 {
@@ -48,7 +47,6 @@ header > div {
     -moz-animation: bounce 1s;
     -webkit-animation: bounce 1s;
     position: fixed;
-    z-index: 1;
 }
 
 html {
@@ -71,7 +69,6 @@ main {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.14), 0 0 20px rgba(0, 0, 0, 0.26);
     -moz-box-shadow: 0 0 25px rgba(0, 0, 0, 0.14), 0 0 20px rgba(0, 0, 0, 0.26);
     -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.14), 0 0 20px rgba(0, 0, 0, 0.26);
-    z-index: 5;
 }
 
 p {
