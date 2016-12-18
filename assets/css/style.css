@@ -37,7 +37,7 @@ img {
 }
 
 p {
-    font-size: 24px;
+    font-size: 16px;
     line-height: 24px;
 }
 
@@ -110,14 +110,18 @@ p {
 }
 
 .center {
-    position: absolute;
-    max-width: 80%;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .fill-screen {
@@ -126,8 +130,20 @@ p {
 }
 
 .link-icon {
-    max-width: 2.2em;
-    height: 2em;
+    height: 2.5em;
+    max-width: 2.7em;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+.link-icon:hover {
+    transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 
 .popup {
@@ -160,6 +176,8 @@ p {
 
 .popup > p {
     color: white;
+    margin: 0;
+    padding: 0;
     white-space: nowrap;
 }
 
@@ -167,7 +185,7 @@ p {
     position: relative;
 }
 
-.popup-wrapper .button:hover ~ .popup {
+.popup-wrapper a:hover ~ .popup {
     opacity: 1;
     top: 35px;
     transform: scale(1);
