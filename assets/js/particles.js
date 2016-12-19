@@ -1,4 +1,4 @@
-const radius = 140;
+const radius = 40;
 
 const display = document.getElementById("canvas");
 const displayWidth = display.width = window.innerWidth * 2;
@@ -13,9 +13,14 @@ document.onmousemove = function (event) {
     mouse.y = event.clientY;
 };
 
+document.onmouseout = function () {
+    mouse.x = undefined;
+    mouse.y = undefined;
+};
+
 const particles = [];
 
-for (let i = 0; i < 60; i++)
+for (let i = 0; i < 360; i++)
     particles.push({
         xPosition: Math.random() * displayWidth,
         yPosition: Math.random() * displayHeight,
@@ -45,10 +50,10 @@ function frame() {
             let c = parseInt(136 + 102 * distance / 400);
             context.fillStyle = "rgba(" + c + " ," + c + ", " + c + ", 0.6)";
             let offset = (400 - distance) / 8;
-            context.arc(p.xPosition + offset / 2, p.yPosition + offset / 2, radius - offset, 0, 2 * Math.PI);
+            context.rect(p.xPosition + offset / 2, p.yPosition + offset / 2, radius - offset, radius - offset);
         } else {
             context.fillStyle = "rgba(238, 238, 238, 0.6)";
-            context.arc(p.xPosition, p.yPosition, radius, 0, 2 * Math.PI);
+            context.rect(p.xPosition, p.yPosition, radius, radius);
         }
         context.fill();
     });
