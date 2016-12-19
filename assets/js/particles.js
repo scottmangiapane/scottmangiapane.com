@@ -4,10 +4,15 @@ const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 const canvasWidth = canvas.width = window.innerWidth * 2;
 const canvasHeight = canvas.height = window.innerHeight * 2;
-context.fillStyle = "#eee";
 
-console.log("canvasWidth: ", canvasWidth);
-console.log("canvasHeight: ", canvasHeight);
+const mouse = [];
+
+canvas.addEventListener("mousemove", onMouse);
+
+function onMouse(event) {
+    mouse.x = event.clientX;
+    mouse.y = event.clientY;
+}
 
 const particles = [];
 
@@ -15,8 +20,8 @@ for (let i = 0; i < 100; i++)
     particles.push({
         xPosition: Math.random() * canvasWidth,
         yPosition: Math.random() * canvasHeight,
-        xVelocity: Math.random() * canvasWidth / 100 - canvasWidth / 200,
-        yVelocity: Math.random() * canvasHeight / 100 - canvasHeight / 200,
+        xVelocity: (Math.random() * canvasWidth - canvasWidth / 2) / 500,
+        yVelocity: (Math.random() * canvasHeight - canvasHeight / 2) / 500,
     });
 
 requestAnimationFrame(frame);
@@ -24,7 +29,6 @@ requestAnimationFrame(frame);
 function frame() {
     requestAnimationFrame(frame);
     context.clearRect(0, 0, canvasWidth, canvasHeight);
-    context.beginPath();
     particles.forEach(function (p) {
         p.xPosition += p.xVelocity;
         p.yPosition += p.yVelocity;
@@ -36,7 +40,17 @@ function frame() {
             p.xPosition = canvasWidth;
         if (p.yPosition < -particleSize)
             p.yPosition = canvasHeight;
-        context.rect(p.xPosition, p.yPosition, particleSize, particleSize);
+        context.beginPath();
+        let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x * 2, 2) + Math.pow(p.yPosition - mouse.y * 2, 2));
+        if (distance < 400) {
+            let c = parseInt(136 + 102 * distance / 400);
+            context.fillStyle = "rgb(" + c + " ," + c + ", " + c + ")";
+            let offset = (400 - distance) / 4;
+            context.rect(p.xPosition - offset / 2, p.yPosition - offset / 2, particleSize + offset, particleSize + offset);
+        } else {
+            context.fillStyle = "rgb(238, 238, 238)";
+            context.rect(p.xPosition, p.yPosition, particleSize, particleSize);
+        }
+        context.fill();
     });
-    context.fill();
 }
