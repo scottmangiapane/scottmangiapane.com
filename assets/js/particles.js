@@ -44,11 +44,11 @@ function frame() {
         let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x * 2, 2) + Math.pow(p.yPosition - mouse.y * 2, 2));
         if (distance < 400) {
             let c = parseInt(136 + 102 * distance / 400);
-            context.fillStyle = "rgb(" + c + " ," + c + ", " + c + ")";
+            context.fillStyle = "rgba(" + c + " ," + c + ", " + c + ", 0.8)";
             let offset = (400 - distance) / 4;
             context.rect(p.xPosition - offset / 2, p.yPosition - offset / 2, particleSize + offset, particleSize + offset);
         } else {
-            context.fillStyle = "rgb(238, 238, 238)";
+            context.fillStyle = "rgba(238, 238, 238, 0.8)";
             context.rect(p.xPosition, p.yPosition, particleSize, particleSize);
         }
         context.fill();
