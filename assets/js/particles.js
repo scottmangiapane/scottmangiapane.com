@@ -1,10 +1,10 @@
 const particleSize = 100;
 
-const canvas = document.getElementById("canvas");
-const canvasWidth = canvas.width = window.innerWidth * 2;
-const canvasHeight = canvas.height = window.innerHeight * 2;
+const display = document.getElementById("canvas");
+const displayWidth = display.width = window.innerWidth * 2;
+const displayHeight = display.height = window.innerHeight * 2;
 
-const context = canvas.getContext("2d");
+const context = display.getContext("2d");
 
 const mouse = [];
 
@@ -17,28 +17,28 @@ const particles = [];
 
 for (let i = 0; i < 100; i++)
     particles.push({
-        xPosition: Math.random() * canvasWidth,
-        yPosition: Math.random() * canvasHeight,
-        xVelocity: (Math.random() * canvasWidth - canvasWidth / 2) / 500,
-        yVelocity: (Math.random() * canvasHeight - canvasHeight / 2) / 500,
+        xPosition: Math.random() * displayWidth,
+        yPosition: Math.random() * displayHeight,
+        xVelocity: (Math.random() * displayWidth - displayWidth / 2) / 500,
+        yVelocity: (Math.random() * displayHeight - displayHeight / 2) / 500,
     });
 
 requestAnimationFrame(frame);
 
 function frame() {
     requestAnimationFrame(frame);
-    context.clearRect(0, 0, canvasWidth, canvasHeight);
+    context.clearRect(0, 0, displayWidth, displayHeight);
     particles.forEach(function (p) {
         p.xPosition += p.xVelocity;
         p.yPosition += p.yVelocity;
-        if (p.xPosition > canvasWidth)
+        if (p.xPosition > displayWidth)
             p.xPosition = -particleSize;
-        if (p.yPosition > canvasHeight)
+        if (p.yPosition > displayHeight)
             p.yPosition = -particleSize;
         if (p.xPosition < -particleSize)
-            p.xPosition = canvasWidth;
+            p.xPosition = displayWidth;
         if (p.yPosition < -particleSize)
-            p.yPosition = canvasHeight;
+            p.yPosition = displayHeight;
         context.beginPath();
         let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x * 2, 2) + Math.pow(p.yPosition - mouse.y * 2, 2));
         if (distance < 400) {
