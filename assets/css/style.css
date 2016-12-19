@@ -80,6 +80,10 @@ p {
     -webkit-transform: scale(1.08);
 }
 
+.canvas {
+    position: fixed;
+}
+
 .card {
     background-color: white;
     border-radius: 2px;
@@ -211,4 +215,8 @@ p {
     color: inherit;
     font-family: inherit;
     font-weight: bolder;
+}
+
+.title {
+    font-family: 'Roboto Condensed', sans-serif;
 }
