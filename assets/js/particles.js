@@ -1,4 +1,4 @@
-const particleSize = 20;
+const particleSize = 100;
 
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
@@ -15,8 +15,8 @@ for (let i = 0; i < 100; i++)
     particles.push({
         xPosition: Math.random() * canvasWidth,
         yPosition: Math.random() * canvasHeight,
-        xVelocity: Math.random() * canvasWidth / 10000 - canvasWidth / 20000,
-        yVelocity: Math.random() * canvasHeight / 10000 - canvasHeight / 20000,
+        xVelocity: Math.random() * canvasWidth / 100 - canvasWidth / 200,
+        yVelocity: Math.random() * canvasHeight / 100 - canvasHeight / 200,
     });
 
 requestAnimationFrame(frame);
@@ -25,20 +25,18 @@ function frame() {
     requestAnimationFrame(frame);
     context.clearRect(0, 0, canvasWidth, canvasHeight);
     context.beginPath();
-    for (let i = 0; i < particles.length; i++) {
-        particles.forEach(function (p) {
-            p.xPosition += p.xVelocity;
-            p.yPosition += p.yVelocity;
-            if (p.xPosition > canvasWidth)
-                p.xPosition = -particleSize;
-            if (p.yPosition > canvasHeight)
-                p.yPosition = -particleSize;
-            if (p.xPosition < -particleSize)
-                p.xPosition = canvasWidth;
-            if (p.yPosition < -particleSize)
-                p.yPosition = canvasHeight;
-            context.rect(p.xPosition, p.yPosition, particleSize, particleSize);
-        });
-    }
+    particles.forEach(function (p) {
+        p.xPosition += p.xVelocity;
+        p.yPosition += p.yVelocity;
+        if (p.xPosition > canvasWidth)
+            p.xPosition = -particleSize;
+        if (p.yPosition > canvasHeight)
+            p.yPosition = -particleSize;
+        if (p.xPosition < -particleSize)
+            p.xPosition = canvasWidth;
+        if (p.yPosition < -particleSize)
+            p.yPosition = canvasHeight;
+        context.rect(p.xPosition, p.yPosition, particleSize, particleSize);
+    });
     context.fill();
 }
