@@ -1,18 +1,17 @@
 const particleSize = 100;
 
 const canvas = document.getElementById("canvas");
-const context = canvas.getContext("2d");
 const canvasWidth = canvas.width = window.innerWidth * 2;
 const canvasHeight = canvas.height = window.innerHeight * 2;
 
+const context = canvas.getContext("2d");
+
 const mouse = [];
 
-canvas.addEventListener("mousemove", onMouse);
-
-function onMouse(event) {
+document.onmousemove = function (event) {
     mouse.x = event.clientX;
     mouse.y = event.clientY;
-}
+};
 
 const particles = [];
 
