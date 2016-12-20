@@ -1,8 +1,8 @@
-const radius = 40;
+const radius = 100;
 
 const display = document.getElementById("canvas");
-const displayWidth = display.width = window.innerWidth * 2;
-const displayHeight = display.height = window.innerHeight * 2;
+let displayWidth = display.width = window.innerWidth * 2;
+let displayHeight = display.height = window.innerHeight * 2;
 
 const context = display.getContext("2d");
 
@@ -18,9 +18,14 @@ document.onmouseout = function () {
     mouse.y = undefined;
 };
 
+window.onresize = function () {
+    displayWidth = display.width = window.innerWidth * 2;
+    displayHeight = display.height = window.innerHeight * 2;
+};
+
 const particles = [];
 
-for (let i = 0; i < 360; i++)
+for (let i = 0; i < 200; i++)
     particles.push({
         xPosition: Math.random() * displayWidth,
         yPosition: Math.random() * displayHeight,
