@@ -6,25 +6,25 @@ let displayHeight = display.height = window.innerHeight * 2;
 
 const context = display.getContext("2d");
 
-const mouse = [];
+const mouse = Object({});
 mouse.x = window.innerWidth / 2;
 mouse.y = window.innerHeight / 2;
 
-document.onmousemove = function (event) {
+document.onmousemove = (event) => {
     if (window.innerWidth >= 550) {
         mouse.x = event.clientX;
         mouse.y = event.clientY;
     }
 };
 
-document.onmouseout = function () {
+document.onmouseout = () => {
     if (window.innerWidth >= 550) {
         mouse.x = undefined;
         mouse.y = undefined;
     }
 };
 
-window.onresize = function () {
+window.onresize = () => {
     if (window.innerWidth < 550) {
         mouse.x = window.innerWidth / 2;
         mouse.y = window.innerHeight / 2;
