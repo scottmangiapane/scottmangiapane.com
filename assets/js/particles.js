@@ -1,12 +1,12 @@
-const blockSize = 100;
-
 const display = document.getElementById("canvas");
-let displayWidth = display.width = window.innerWidth * 2;
-let displayHeight = display.height = window.innerHeight * 2;
-
 const context = display.getContext("2d");
 
+const blockSize = 100;
 const mouse = Object({});
+
+let displayHeight = display.height = window.innerHeight * 2;
+let displayWidth = display.width = window.innerWidth * 2;
+
 mouse.x = window.innerWidth / 2;
 mouse.y = window.innerHeight / 2;
 
