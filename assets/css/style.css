@@ -124,9 +124,28 @@ p {
     margin: 0 8px;
 }
 
-@media all and (max-width: 480px) {
-    .spacer-horizontal {
-        display: block;
-        margin: 6px 0;
+@media all and (max-width: 520px) {
+    .card {
+        width: 100%;
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        box-shadow: 0;
+        -moz-box-shadow: 0;
+        -webkit-box-shadow: 0;
+        margin: 0;
+    }
+
+    .center {
+        align-items: inherit;
+        -webkit-align-items: inherit;
+        -moz-box-align: inherit;
+        -webkit-box-align: inherit;
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
