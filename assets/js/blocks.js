@@ -36,8 +36,8 @@ for (let i = 0; i < numberOfBlocks; i++) {
     let xVelocity = Math.random() * maxSpeed - maxSpeed / 2;
     let yVelocity = Math.random() * maxSpeed - maxSpeed / 2;
     blocks.push({
-        xPosition: Math.random() * displayWidth,
-        yPosition: Math.random() * displayHeight,
+        xPosition: (displayWidth - blockSize) / 2,
+        yPosition: (displayHeight - blockSize) / 2,
         xVelocity: xVelocity,
         yVelocity: yVelocity,
         xVelocityBase: xVelocity,
@@ -53,21 +53,6 @@ function frame() {
     blocks.forEach(function (p) {
         let cardDimensions = card.getBoundingClientRect();
         let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x, 2) + Math.pow(p.yPosition - mouse.y, 2));
-        if (mouse.x / 2 > cardDimensions.left &&
-            mouse.x / 2 < cardDimensions.right &&
-            mouse.y / 2 > cardDimensions.top &&
-            mouse.y / 2 < cardDimensions.bottom) {
-            p.yVelocity += 1.2;
-            p.xVelocity -= 0.2;
-        }
-        if (p.xVelocity > 5 * maxSpeed)
-            p.xVelocity = 5 * maxSpeed;
-        if (p.yVelocity > 5 * maxSpeed)
-            p.yVelocity = 5 * maxSpeed;
-        if (p.xVelocity < -5 * maxSpeed)
-            p.xVelocity = -5 * maxSpeed;
-        if (p.yVelocity < -5 * maxSpeed)
-            p.yVelocity = -5 * maxSpeed;
         p.xPosition += p.xVelocity;
         p.yPosition += p.yVelocity;
         if (p.xPosition > displayWidth)
