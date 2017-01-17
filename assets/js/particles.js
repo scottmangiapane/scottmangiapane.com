@@ -1,11 +1,10 @@
 const display = document.getElementById("canvas");
 const context = display.getContext("2d");
-
-const blockSize = 100;
 const mouse = Object({});
 
 let displayHeight = display.height = window.innerHeight * 2;
 let displayWidth = display.width = window.innerWidth * 2;
+let blockSize = (displayWidth + displayHeight) / 40;
 
 mouse.x = undefined;
 mouse.y = undefined;
@@ -25,12 +24,9 @@ document.onmouseout = () => {
 };
 
 window.onresize = () => {
-    if (window.innerWidth < 550) {
-        mouse.x = window.innerWidth / 2;
-        mouse.y = window.innerHeight / 2;
-    }
     displayWidth = display.width = window.innerWidth * 2;
     displayHeight = display.height = window.innerHeight * 2;
+    blockSize = (displayWidth + displayHeight) / 40;
 };
 
 const particles = [];
@@ -69,16 +65,16 @@ function frame() {
         if (distance < 400) {
             p.xPosition - mouse.x > 0 ? p.xVelocity++ : p.xVelocity--;
             p.yPosition - mouse.y > 0 ? p.yVelocity++ : p.yVelocity--;
-            let color = parseInt(136 + 102 * distance / 400);
-            let offset = (400 - distance) / 8;
-            context.fillStyle = "rgba(" + color + " ," + color + ", " + color + ", 0.6)";
+            let color = parseInt(200 * distance / 400);
+            let offset = (400 - distance) / 4;
+            context.fillStyle = "rgba(" + color + " ," + color + ", " + color + ", 0.1)";
             context.rect(p.xPosition + offset / 2, p.yPosition + offset / 2, blockSize - offset, blockSize - offset);
         } else {
             if (p.xVelocity !== p.xVelocityBase)
                 (p.xVelocity > p.xVelocityBase) ? p.xVelocity-- : p.xVelocity++;
             if (p.yVelocity !== p.yVelocityBase)
                 (p.yVelocity > p.yVelocityBase) ? p.yVelocity-- : p.yVelocity++;
-            context.fillStyle = "rgba(238, 238, 238, 0.6)";
+            context.fillStyle = "rgba(200, 200, 200, 0.1)";
             context.rect(p.xPosition, p.yPosition, blockSize, blockSize);
         }
         context.fill();
