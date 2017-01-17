@@ -36,8 +36,8 @@ for (let i = 0; i < numberOfBlocks; i++) {
     let xVelocity = Math.random() * maxSpeed - maxSpeed / 2;
     let yVelocity = Math.random() * maxSpeed - maxSpeed / 2;
     blocks.push({
-        xPosition: (displayWidth - blockSize) / 2,
-        yPosition: (displayHeight - blockSize) / 2,
+        xPosition: Math.random() * displayWidth,
+        yPosition: Math.random() * displayHeight,
         xVelocity: xVelocity,
         yVelocity: yVelocity,
         xVelocityBase: xVelocity,
@@ -53,16 +53,33 @@ function frame() {
     blocks.forEach(function (p) {
         let cardDimensions = card.getBoundingClientRect();
         let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x, 2) + Math.pow(p.yPosition - mouse.y, 2));
-        p.xPosition += p.xVelocity;
-        p.yPosition += p.yVelocity;
-        if (p.xPosition > displayWidth)
-            p.xPosition = -blockSize;
-        if (p.yPosition > displayHeight)
-            p.yPosition = -blockSize;
-        if (p.xPosition < -blockSize)
-            p.xPosition = displayWidth;
-        if (p.yPosition < -blockSize)
-            p.yPosition = displayHeight;
+        if (mouse.x / 2 > cardDimensions.left &&
+            mouse.x / 2 < cardDimensions.right &&
+            mouse.y / 2 > cardDimensions.top &&
+            mouse.y / 2 < cardDimensions.bottom) {
+            let speedFactor = Math.sqrt(Math.pow(p.xVelocity, 2) + Math.pow(p.yVelocity / 2, 2)) / Math.sqrt(Math.pow(p.xPosition - displayWidth / 2, 2) + Math.pow(p.yPosition - displayHeight / 2, 2));
+            p.xPosition += maxSpeed * (p.yPosition - displayHeight / 2) * speedFactor;
+            p.yPosition += maxSpeed * (displayWidth / 2 - p.xPosition) * speedFactor;
+        } else {
+            if (p.xVelocity > 5 * maxSpeed)
+                p.xVelocity = 5 * maxSpeed;
+            if (p.yVelocity > 5 * maxSpeed)
+                p.yVelocity = 5 * maxSpeed;
+            if (p.xVelocity < -5 * maxSpeed)
+                p.xVelocity = -5 * maxSpeed;
+            if (p.yVelocity < -5 * maxSpeed)
+                p.yVelocity = -5 * maxSpeed;
+            p.xPosition += p.xVelocity;
+            p.yPosition += p.yVelocity;
+            if (p.xPosition > displayWidth)
+                p.xPosition = -blockSize;
+            if (p.yPosition > displayHeight)
+                p.yPosition = -blockSize;
+            if (p.xPosition < -blockSize)
+                p.xPosition = displayWidth;
+            if (p.yPosition < -blockSize)
+                p.yPosition = displayHeight;
+        }
         context.beginPath();
         if (distance < mouseRadius) {
             p.xPosition - mouse.x > 0 ? p.xVelocity += 0.5 : p.xVelocity -= 0.5;
@@ -72,10 +89,8 @@ function frame() {
             context.fillStyle = "rgba(" + color + " ," + color + ", " + color + ", 0.1)";
             context.rect(p.xPosition + offset / 2, p.yPosition + offset / 2, blockSize - offset, blockSize - offset);
         } else {
-            if (p.xVelocity !== p.xVelocityBase)
-                (p.xVelocity > p.xVelocityBase) ? p.xVelocity -= 0.5 : p.xVelocity += 0.5;
-            if (p.yVelocity !== p.yVelocityBase)
-                (p.yVelocity > p.yVelocityBase) ? p.yVelocity -= 0.5 : p.yVelocity += 0.5;
+            p.xVelocity > p.xVelocityBase ? p.xVelocity -= 0.5 : p.xVelocity += 0.5;
+            p.yVelocity > p.yVelocityBase ? p.yVelocity -= 0.5 : p.yVelocity += 0.5;
             context.fillStyle = "rgba(200, 200, 200, 0.1)";
             context.rect(p.xPosition, p.yPosition, blockSize, blockSize);
         }
