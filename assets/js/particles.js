@@ -7,13 +7,13 @@ const mouse = Object({});
 let displayHeight = display.height = window.innerHeight * 2;
 let displayWidth = display.width = window.innerWidth * 2;
 
-mouse.x = window.innerWidth / 2;
-mouse.y = window.innerHeight / 2;
+mouse.x = undefined;
+mouse.y = undefined;
 
 document.onmousemove = (event) => {
     if (window.innerWidth >= 550) {
-        mouse.x = event.clientX;
-        mouse.y = event.clientY;
+        mouse.x = event.clientX * 2;
+        mouse.y = event.clientY * 2;
     }
 };
 
@@ -35,13 +35,18 @@ window.onresize = () => {
 
 const particles = [];
 
-for (let i = 0; i < 200; i++)
+for (let i = 0; i < 200; i++) {
+    let xVelocity = Math.random() * 6 - 3;
+    let yVelocity = Math.random() * 6 - 3;
     particles.push({
         xPosition: Math.random() * displayWidth,
         yPosition: Math.random() * displayHeight,
-        xVelocity: (Math.random() * 6 - 3),
-        yVelocity: (Math.random() * 6 - 3),
+        xVelocity: xVelocity,
+        yVelocity: yVelocity,
+        xVelocityBase: xVelocity,
+        yVelocityBase: yVelocity,
     });
+}
 
 requestAnimationFrame(frame);
 
@@ -60,13 +65,19 @@ function frame() {
         if (p.yPosition < -blockSize)
             p.yPosition = displayHeight;
         context.beginPath();
-        let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x * 2, 2) + Math.pow(p.yPosition - mouse.y * 2, 2));
+        let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x, 2) + Math.pow(p.yPosition - mouse.y, 2));
         if (distance < 400) {
-            let c = parseInt(136 + 102 * distance / 400);
-            context.fillStyle = "rgba(" + c + " ," + c + ", " + c + ", 0.6)";
+            p.xPosition - mouse.x > 0 ? p.xVelocity++ : p.xVelocity--;
+            p.yPosition - mouse.y > 0 ? p.yVelocity++ : p.yVelocity--;
+            let color = parseInt(136 + 102 * distance / 400);
             let offset = (400 - distance) / 8;
+            context.fillStyle = "rgba(" + color + " ," + color + ", " + color + ", 0.6)";
             context.rect(p.xPosition + offset / 2, p.yPosition + offset / 2, blockSize - offset, blockSize - offset);
         } else {
+            if (p.xVelocity !== p.xVelocityBase)
+                (p.xVelocity > p.xVelocityBase) ? p.xVelocity-- : p.xVelocity++;
+            if (p.yVelocity !== p.yVelocityBase)
+                (p.yVelocity > p.yVelocityBase) ? p.yVelocity-- : p.yVelocity++;
             context.fillStyle = "rgba(238, 238, 238, 0.6)";
             context.rect(p.xPosition, p.yPosition, blockSize, blockSize);
         }
