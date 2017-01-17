@@ -1,6 +1,6 @@
 ## scottmangiapane.com
 
-My personal website and project portfolio.
+My personal website and project portfolio. I made it entirely from scratch, without any libraries or dependencies.
 
 ## Versions
 
