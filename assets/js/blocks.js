@@ -1,4 +1,5 @@
 const display = document.getElementById("canvas");
+const card = document.getElementById("card");
 const context = display.getContext("2d");
 const mouse = Object({});
 
@@ -8,8 +9,8 @@ let blockSize = (displayWidth + displayHeight) / 40;
 let maxSpeed = blockSize / 20;
 let mouseRadius = 400;
 
-const numberOfParticles = (displayWidth * displayHeight) / (3 * blockSize * blockSize);
-const particles = [];
+const numberOfBlocks = (displayWidth * displayHeight) / (3 * blockSize * blockSize);
+const blocks = [];
 
 mouse.x = undefined;
 mouse.y = undefined;
@@ -31,10 +32,10 @@ window.onresize = () => {
     maxSpeed = blockSize / 20;
 };
 
-for (let i = 0; i < numberOfParticles; i++) {
+for (let i = 0; i < numberOfBlocks; i++) {
     let xVelocity = Math.random() * maxSpeed - maxSpeed / 2;
     let yVelocity = Math.random() * maxSpeed - maxSpeed / 2;
-    particles.push({
+    blocks.push({
         xPosition: Math.random() * displayWidth,
         yPosition: Math.random() * displayHeight,
         xVelocity: xVelocity,
@@ -49,7 +50,24 @@ requestAnimationFrame(frame);
 function frame() {
     requestAnimationFrame(frame);
     context.clearRect(0, 0, displayWidth, displayHeight);
-    particles.forEach(function (p) {
+    blocks.forEach(function (p) {
+        let cardDimensions = card.getBoundingClientRect();
+        let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x, 2) + Math.pow(p.yPosition - mouse.y, 2));
+        if (mouse.x / 2 > cardDimensions.left &&
+            mouse.x / 2 < cardDimensions.right &&
+            mouse.y / 2 > cardDimensions.top &&
+            mouse.y / 2 < cardDimensions.bottom) {
+            p.yVelocity += 1.2;
+            p.xVelocity -= 0.2;
+        }
+        if (p.xVelocity > 5 * maxSpeed)
+            p.xVelocity = 5 * maxSpeed;
+        if (p.yVelocity > 5 * maxSpeed)
+            p.yVelocity = 5 * maxSpeed;
+        if (p.xVelocity < -5 * maxSpeed)
+            p.xVelocity = -5 * maxSpeed;
+        if (p.yVelocity < -5 * maxSpeed)
+            p.yVelocity = -5 * maxSpeed;
         p.xPosition += p.xVelocity;
         p.yPosition += p.yVelocity;
         if (p.xPosition > displayWidth)
@@ -61,7 +79,6 @@ function frame() {
         if (p.yPosition < -blockSize)
             p.yPosition = displayHeight;
         context.beginPath();
-        let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x, 2) + Math.pow(p.yPosition - mouse.y, 2));
         if (distance < mouseRadius) {
             p.xPosition - mouse.x > 0 ? p.xVelocity += 0.5 : p.xVelocity -= 0.5;
             p.yPosition - mouse.y > 0 ? p.yVelocity += 0.5 : p.yVelocity -= 0.5;
