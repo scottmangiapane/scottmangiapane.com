@@ -51,35 +51,25 @@ function frame() {
     requestAnimationFrame(frame);
     context.clearRect(0, 0, displayWidth, displayHeight);
     blocks.forEach(function (p) {
-        let cardDimensions = card.getBoundingClientRect();
         let distance = Math.sqrt(Math.pow(p.xPosition - mouse.x, 2) + Math.pow(p.yPosition - mouse.y, 2));
-        if (mouse.x / 2 > cardDimensions.left &&
-            mouse.x / 2 < cardDimensions.right &&
-            mouse.y / 2 > cardDimensions.top &&
-            mouse.y / 2 < cardDimensions.bottom) {
-            let speedFactor = Math.sqrt(Math.pow(p.xVelocity, 2) + Math.pow(p.yVelocity / 2, 2)) / Math.sqrt(Math.pow(p.xPosition - displayWidth / 2, 2) + Math.pow(p.yPosition - displayHeight / 2, 2));
-            p.xPosition += maxSpeed * (p.yPosition - displayHeight / 2) * speedFactor;
-            p.yPosition += maxSpeed * (displayWidth / 2 - p.xPosition) * speedFactor;
-        } else {
-            if (p.xVelocity > 5 * maxSpeed)
-                p.xVelocity = 5 * maxSpeed;
-            if (p.yVelocity > 5 * maxSpeed)
-                p.yVelocity = 5 * maxSpeed;
-            if (p.xVelocity < -5 * maxSpeed)
-                p.xVelocity = -5 * maxSpeed;
-            if (p.yVelocity < -5 * maxSpeed)
-                p.yVelocity = -5 * maxSpeed;
-            p.xPosition += p.xVelocity;
-            p.yPosition += p.yVelocity;
-            if (p.xPosition > displayWidth)
-                p.xPosition = -blockSize;
-            if (p.yPosition > displayHeight)
-                p.yPosition = -blockSize;
-            if (p.xPosition < -blockSize)
-                p.xPosition = displayWidth;
-            if (p.yPosition < -blockSize)
-                p.yPosition = displayHeight;
-        }
+        if (p.xVelocity > 5 * maxSpeed)
+            p.xVelocity = 5 * maxSpeed;
+        if (p.yVelocity > 5 * maxSpeed)
+            p.yVelocity = 5 * maxSpeed;
+        if (p.xVelocity < -5 * maxSpeed)
+            p.xVelocity = -5 * maxSpeed;
+        if (p.yVelocity < -5 * maxSpeed)
+            p.yVelocity = -5 * maxSpeed;
+        p.xPosition += p.xVelocity;
+        p.yPosition += p.yVelocity;
+        if (p.xPosition > displayWidth)
+            p.xPosition = -blockSize;
+        if (p.yPosition > displayHeight)
+            p.yPosition = -blockSize;
+        if (p.xPosition < -blockSize)
+            p.xPosition = displayWidth;
+        if (p.yPosition < -blockSize)
+            p.yPosition = displayHeight;
         context.beginPath();
         if (distance < mouseRadius) {
             p.xPosition - mouse.x > 0 ? p.xVelocity += 0.5 : p.xVelocity -= 0.5;
