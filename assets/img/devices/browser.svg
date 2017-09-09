@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214.8 231.95"><defs><style>.cls-1{fill:#5c5c5c;}.cls-2{fill:#dcdadc;}.cls-3{fill:#f1615f;}.cls-4{fill:#fcbd40;}.cls-5{fill:#50b84c;}</style></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M207.5,0H7.3A7.32,7.32,0,0,0,0,7.3V232H214.8V7.3A7.32,7.32,0,0,0,207.5,0ZM213,230.15H1.79V7.3A5.51,5.51,0,0,1,7.3,1.79H207.5A5.51,5.51,0,0,1,213,7.3Z"/><path class="cls-2" d="M213,7.3V19H1.79V7.3A5.51,5.51,0,0,1,7.3,1.79H207.5A5.51,5.51,0,0,1,213,7.3Z"/><circle class="cls-3" cx="13.18" cy="10.36" r="3.59"/><circle class="cls-4" cx="25.73" cy="10.36" r="3.59"/><circle class="cls-5" cx="38.29" cy="10.36" r="3.59"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 214.8 231.9" style="enable-background:new 0 0 214.8 231.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#5C5C5C;}
+	.st1{fill:#DCDADC;}
+	.st2{fill:#F1615F;}
+	.st3{fill:#FCBD40;}
+	.st4{fill:#50B84C;}
+</style>
+<path class="st0" d="M207.5,0H7.3C3.3,0,0,3.3,0,7.3V232h214.8V7.3C214.8,3.3,211.5,0,207.5,0z M213,230.1H1.8V7.3
+	c0-3,2.5-5.5,5.5-5.5l0,0h200.2c3,0,5.5,2.5,5.5,5.5V230.1z"/>
+<path class="st1" d="M213,7.3V19H1.8V7.3c0-3,2.5-5.5,5.5-5.5l0,0h200.2C210.5,1.8,213,4.3,213,7.3z"/>
+<circle class="st2" cx="13.2" cy="10.4" r="3.6"/>
+<circle class="st3" cx="25.7" cy="10.4" r="3.6"/>
+<circle class="st4" cx="38.3" cy="10.4" r="3.6"/>
+</svg>
