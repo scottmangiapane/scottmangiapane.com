@@ -65,7 +65,6 @@ html {
 }
 
 img {
-    image-rendering: pixelated;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -268,7 +267,7 @@ main {
 }
 
 .demo-wrapper-calculator {
-    width: 65%;
+    width: 63%;
     margin: 0 auto;
     position: relative;
 }
@@ -525,7 +524,7 @@ main {
     }
 
     .demo-wrapper-calculator {
-        width: 78%;
+        width: 76%;
         margin: 0 auto;
     }
 }
@@ -542,7 +541,7 @@ main {
     }
 
     .demo-wrapper-calculator {
-        width: 100%;
+        width: 99%;
         margin: 0 auto;
     }
 
