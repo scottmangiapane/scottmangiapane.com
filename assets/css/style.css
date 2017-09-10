@@ -243,6 +243,16 @@ main {
     -webkit-transform: translate(-50%, -46%);
 }
 
+.demo-overlay-calculator {
+    width: 60%;
+    position: absolute;
+    transform: translate(-50%, -150%);
+    -moz-transform: translate(-50%, -200%);
+    -ms-transform: translate(-50%, -200%);
+    -webkit-transform: translate(-50%, -202%);
+    z-index: 20;
+}
+
 .demo-wrapper-android {
     width: 65%;
     margin: 0 auto;
@@ -255,8 +265,8 @@ main {
     position: relative;
 }
 
-.demo-wrapper-rpi {
-    width: 75%;
+.demo-wrapper-calculator {
+    width: 65%;
     margin: 0 auto;
     position: relative;
 }
@@ -512,8 +522,8 @@ main {
         margin: 0 auto;
     }
 
-    .demo-wrapper-rpi {
-        width: 88%;
+    .demo-wrapper-calculator {
+        width: 78%;
         margin: 0 auto;
     }
 }
@@ -529,7 +539,7 @@ main {
         margin: 0 auto;
     }
 
-    .demo-wrapper-rpi {
+    .demo-wrapper-calculator {
         width: 100%;
         margin: 0 auto;
     }
