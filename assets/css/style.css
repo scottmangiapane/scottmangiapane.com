@@ -65,6 +65,7 @@ html {
 }
 
 img {
+    image-rendering: pixelated;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -309,10 +310,6 @@ main {
 
 .inline {
     display: inline;
-}
-
-.pixelize {
-    image-rendering: pixelated;
 }
 
 .popup {
