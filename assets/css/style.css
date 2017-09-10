@@ -5,11 +5,13 @@
     position: relative;
 }
 
-a {
+a, li {
     font-family: inherit;
+    line-height: inherit;
+    margin: inherit;
 }
 
-a, li, p {
+p {
     color: #767676;
     font-size: 16px;
     line-height: 24px;

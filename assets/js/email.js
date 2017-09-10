@@ -1,8 +1,8 @@
 tag = 'mailto';
 colon = '&#x0003a;';
-user = 'email';
+user = 'scottmangiapane';
 at = '&#x00040;';
-site = 'scottmangiapane.com';
+site = 'gmail.com';
 document.write("<span class='popup-wrapper'><a class='button' href='"
     + tag + colon + user + at + site
     + "'>" + "E-MAIL" + "</a><span class='popup'><p class='remove-margins'>"
