@@ -7,7 +7,7 @@ const mouse = { x: null, y: null };
 let x1 = 0;
 let x2 = 0;
 
-const text = 'TODO: insert easter egg here.';
+const text = 'Hello, world!';
 const binary = text.split('').map(c => c.charCodeAt(0).toString(2)).join('');
 
 document.onmousemove = (event) => {
@@ -22,7 +22,7 @@ document.onmouseout = () => {
 
 window.onresize = () => {
     clearTimeout(drawTimeout);
-    drawTimeout = setTimeout(initialize, 500);
+    drawTimeout = setTimeout(initialize, 100);
 };
 
 initialize();
@@ -31,30 +31,24 @@ requestAnimationFrame(frame);
 function initialize() {
     height = canvas.height = window.innerHeight * 2;
     width = canvas.width = window.innerWidth * 2;
-    fontSize = Math.max(width / 128, 12);
-}
-
-function isNearMouseRadially(x, y, delta) {
-    if (mouse.x && mouse.y) {
-        const absX = Math.abs(mouse.x - x);
-        const absY = Math.abs(mouse.y - y);
-        return Math.sqrt(absX * absX + absY * absY) < delta;
-    }
-    return false;
-}
-
-function isNearMouseLinearly(x, y, delta) {
-    if (mouse.x && mouse.y) {
-        const nearX = x === null || Math.abs(mouse.x - x) < delta;
-        const nearY = y === null || Math.abs(mouse.y - y) < delta;
-        return nearX && nearY;
-    }
-    return false;
+    fontSize = Math.max(width / 80, 12);
 }
 
 function frame() {
     requestAnimationFrame(frame);
+    clearFrame();
+    drawBinary();
+    drawOverlay();
+
+    x1 = width + (x1 + 1) % width;
+    x2 = width + (x2 - 1) % width;
+}
+
+function clearFrame() {
     ctx.clearRect(0, 0, width, height);
+}
+
+function drawBinary() {
     ctx.font = fontSize + 'px "Roboto Mono"';
     ctx.globalCompositeOperation = 'source-over';
 
@@ -65,17 +59,22 @@ function frame() {
                 ? (x1 + (x + y) * fontSize) % width
                 : (x2 + (x - y) * fontSize) % width;
             const drawY = y * fontSize;
-            if (isNearMouseLinearly(drawX, null, fontSize / 2)) {
+            if (isPointOnBorder(drawX, drawY, fontSize * 32)) {
+                ctx.fillStyle = 'black';
+            }
+            if (doesPointIntersectMouse(drawX, null, fontSize / 2)) {
                 ctx.fillStyle = '#da3436';
             }
-            if (isNearMouseLinearly(null, drawY, fontSize / 2)) {
+            if (doesPointIntersectMouse(null, drawY, fontSize / 2)) {
                 ctx.fillStyle = '#da3436';
             }
-            ctx.fillText(binary[x], drawX, drawY);
+            ctx.fillText(binary[x % binary.length], drawX, drawY);
         }
     }
+}
 
-    ctx.font = '700 ' + width / 4 + 'px "Roboto Mono"';
+function drawOverlay() {
+    ctx.font = '700 ' + width / 2 + 'px "Roboto Mono"';
     ctx.globalCompositeOperation = 'source-atop';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -83,9 +82,22 @@ function frame() {
     const palette = ['#86981c', '#32a198', '#2e8dd0', '#6d73c2', '#d13a82'];
     for (let i = palette.length - 1; i >= 0; i--) {
         ctx.fillStyle = palette[i];
-        ctx.fillText('Scott', width / 2 + fontSize * i, height / 2);
+        const overlay = (new Date()).getMilliseconds() > 500 ? '>_' : '> ';
+        ctx.fillText(overlay, width / 2 + fontSize * i, height / 2);
     }
+}
 
-    x1 = width + (x1 + 1) % width;
-    x2 = width + (x2 - 1) % width;
+function isPointOnBorder(x, y, delta) {
+    const absX = Math.abs(width / 2 - x);
+    const absY = Math.abs(height / 2 - y);
+    return absX > delta || absY > delta;
+}
+
+function doesPointIntersectMouse(x, y, delta) {
+    if (mouse.x && mouse.y) {
+        const nearX = x === null || Math.abs(mouse.x - x) < delta;
+        const nearY = y === null || Math.abs(mouse.y - y) < delta;
+        return nearX && nearY;
+    }
+    return false;
 }

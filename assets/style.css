@@ -1,7 +1,7 @@
 /* Palette */
 
 :root {
-    --bg: #0a3642;
+    --bg: #022b36;
     --bg-text: #596e75;
     --link: #2e8dd0;
     --link-active: #2e8dd0;
@@ -53,9 +53,10 @@ body {
     animation: bounce 1s;
     background-color: var(--bg);
     border: 2px solid var(--bg-text);
+    border-radius: 4px;
     bottom: 0;
     left: 50%;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
     padding: 16px;
     position: fixed;
     text-align: left;
