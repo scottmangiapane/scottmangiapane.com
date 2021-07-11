@@ -52,8 +52,8 @@ function drawBinary() {
     ctx.font = fontSize + 'px "Roboto Mono"';
     ctx.globalCompositeOperation = 'source-over';
 
-    for (let y = 0; y < height / fontSize + 1; y++) {
-        for (let x = 0; x < width / fontSize + 1; x++) {
+    for (let y = 0; y <= height / fontSize; y++) {
+        for (let x = 0; x < width / fontSize; x++) {
             ctx.fillStyle = '#596e75';
             const drawX = (y % 2)
                 ? (x1 + (x + y) * fontSize) % width
@@ -79,7 +79,7 @@ function drawOverlay() {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
-    const palette = ['#86981c', '#32a198', '#2e8dd0', '#6d73c2', '#d13a82'];
+    const palette = ['#86981c', '#32a198', '#2e8dd0', '#6d73c2'];
     for (let i = palette.length - 1; i >= 0; i--) {
         ctx.fillStyle = palette[i];
         const overlay = (new Date()).getMilliseconds() > 500 ? '>_' : '> ';

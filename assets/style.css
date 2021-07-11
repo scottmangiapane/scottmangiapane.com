@@ -4,7 +4,7 @@
     --bg: #022b36;
     --bg-text: #596e75;
     --link: #2e8dd0;
-    --link-active: #2e8dd0;
+    --link-active: #48a7ea;
 }
 
 /* Resets */
@@ -77,13 +77,11 @@ body {
 
 .icon {
     cursor: pointer;
-    fill: var(--link);
+    fill: currentColor;
     height: 3em;
     max-width: 3.2em;
     user-select: none;
 }
-
-.icon:hover { fill: var(--link-active); }
 
 .row {
     align-items: center;
