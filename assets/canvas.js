@@ -31,7 +31,7 @@ requestAnimationFrame(frame);
 function initialize() {
     height = canvas.height = window.innerHeight * 2;
     width = canvas.width = window.innerWidth * 2;
-    fontSize = Math.max(width / 80, 12);
+    fontSize = Math.max(width / 128, 12);
 }
 
 function frame() {
@@ -60,14 +60,14 @@ function drawBinary() {
                 ? mod(x1 + (x + y * 8) * fontSize, width)
                 : mod(x2 + (x - y * 8) * fontSize, width);
             const drawY = y * fontSize;
-            if (isPointOnBorder(drawX, drawY, fontSize * 32)) {
+            if (isPointOnBorder(drawX, drawY, width / 4)) {
                 ctx.fillStyle = 'black';
-            }
-            if (doesPointIntersectMouse(drawX, null, fontSize / 2)) {
-                ctx.fillStyle = '#da3436';
-            }
-            if (doesPointIntersectMouse(null, drawY, fontSize / 2)) {
-                ctx.fillStyle = '#da3436';
+                if (doesPointIntersectMouse(drawX, null, fontSize / 2)) {
+                    ctx.fillStyle = '#da3436';
+                }
+                if (doesPointIntersectMouse(null, drawY, fontSize / 2)) {
+                    ctx.fillStyle = '#da3436';
+                }
             }
             ctx.fillText(binary[x % binary.length], drawX, drawY);
         }
@@ -84,7 +84,7 @@ function drawOverlay() {
     for (let i = palette.length - 1; i >= 0; i--) {
         ctx.fillStyle = palette[i];
         const overlay = (new Date()).getMilliseconds() > 500 ? '>_' : '> ';
-        ctx.fillText(overlay, width / 2 + fontSize * i, height / 2);
+        ctx.fillText(overlay, width / 2 + fontSize * (i - palette.length / 2), height / 2);
     }
 }
 
