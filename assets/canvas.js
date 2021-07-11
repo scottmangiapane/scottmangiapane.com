@@ -4,8 +4,7 @@ const ctx = canvas.getContext('2d');
 let height, width, fontSize, drawTimeout;
 
 const mouse = { x: null, y: null };
-let x1 = 0;
-let x2 = 0;
+let offset = 0;
 
 const text = 'Hello, world!';
 const binary = text.split('').map(c => c.charCodeAt(0).toString(2)).join('');
@@ -25,8 +24,10 @@ window.onresize = () => {
     drawTimeout = setTimeout(initialize, 100);
 };
 
-initialize();
-requestAnimationFrame(frame);
+window.onload = () => {
+    initialize();
+    requestAnimationFrame(frame);
+};
 
 function initialize() {
     height = canvas.height = window.innerHeight * 2;
@@ -41,8 +42,7 @@ function frame() {
     drawBinary();
     drawOverlay();
 
-    x1 = mod(x1 + 1, width);
-    x2 = mod(x2 - 1, width);
+    offset = (offset + 1) % width;
 }
 
 function clearFrame() {
@@ -57,8 +57,8 @@ function drawBinary() {
         for (let x = 0; x < width / fontSize; x++) {
             ctx.fillStyle = '#596e75';
             const drawX = (y % 2)
-                ? mod(x1 + (x + y * 8) * fontSize, width)
-                : mod(x2 + (x - y * 8) * fontSize, width);
+                ? mod(offset + (x + y * 8) * fontSize, width)
+                : mod(-offset + (x - y * 8) * fontSize, width);
             const drawY = y * fontSize;
             if (isPointOnBorder(drawX, drawY, width / 4)) {
                 ctx.fillStyle = 'black';

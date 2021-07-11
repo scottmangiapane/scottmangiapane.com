@@ -44,30 +44,26 @@ body {
 
 /* Class selectors */
 
-.background {
-    position: fixed;
-    z-index: 0;
-}
-
 .card {
-    animation: bounce 1s;
     background-color: var(--bg);
     border: 2px solid var(--bg-text);
     border-radius: 4px;
     bottom: 0;
-    left: 50%;
-    margin-bottom: 16px;
+    margin: 32px;
     padding: 16px;
     position: fixed;
     text-align: left;
-    transform: translateX(-50%);
     z-index: 1;
 }
 
-.center {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+.card-left {
+    animation: bounce-left 1s;
+    left: 0;
+}
+
+.card-right {
+    animation: bounce-right 1s;
+    right: 0;
 }
 
 .fill {
@@ -94,10 +90,18 @@ body {
 
 /* Keyframes */
 
-@keyframes bounce {
-    0% { transform: translate(-50%, 200px); }
-    25% { transform: translate(-50%, -30px); }
-    50% { transform: translate(-50%, 10px); }
-    75% { transform: translate(-50%, -4px); }
-    100% { transform: translate(-50%, 0); }
+@keyframes bounce-left {
+    0% { transform: translateX(-200px); }
+    25% { transform: translateX(30px); }
+    50% { transform: translateX(-10px); }
+    75% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes bounce-right {
+    0% { transform: translateX(200px); }
+    25% { transform: translateX(-30px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
 }
