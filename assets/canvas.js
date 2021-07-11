@@ -36,12 +36,13 @@ function initialize() {
 
 function frame() {
     requestAnimationFrame(frame);
+
     clearFrame();
     drawBinary();
     drawOverlay();
 
-    x1 = width + (x1 + 1) % width;
-    x2 = width + (x2 - 1) % width;
+    x1 = mod(x1 + 1, width);
+    x2 = mod(x2 - 1, width);
 }
 
 function clearFrame() {
@@ -56,8 +57,8 @@ function drawBinary() {
         for (let x = 0; x < width / fontSize; x++) {
             ctx.fillStyle = '#596e75';
             const drawX = (y % 2)
-                ? (x1 + (x + y) * fontSize) % width
-                : (x2 + (x - y) * fontSize) % width;
+                ? mod(x1 + (x + y * 8) * fontSize, width)
+                : mod(x2 + (x - y * 8) * fontSize, width);
             const drawY = y * fontSize;
             if (isPointOnBorder(drawX, drawY, fontSize * 32)) {
                 ctx.fillStyle = 'black';
@@ -100,4 +101,8 @@ function doesPointIntersectMouse(x, y, delta) {
         return nearX && nearY;
     }
     return false;
+}
+
+function mod(dividend, divisor) {
+    return ((dividend % divisor) + divisor) % divisor;
 }
