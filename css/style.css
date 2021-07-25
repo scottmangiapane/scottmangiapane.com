@@ -1,4 +1,3 @@
-
 /* Resets */
 
 a, a:active, a:focus, a:hover, a:visited { text-decoration:none; }
@@ -257,27 +256,23 @@ main {
 }
 
 .demo {
-    margin: 12px 0;
-    z-index: 10;
-}
-
-.demo-overlay-android {
-    width: 84%;
+    opacity: 0;
     position: absolute;
     z-index: 20;
 }
 
-.demo-overlay-js {
+.demo-android {
+    width: 84%;
+}
+
+.demo-js {
     width: 93%;
-    position: absolute;
     transform: translate(-50%, -46%);
 }
 
-.demo-overlay-calculator {
+.demo-calculator {
     width: 60%;
-    position: absolute;
     transform: translate(-50%, -202%);
-    z-index: 20;
 }
 
 .demo-wrapper-android {
@@ -296,6 +291,11 @@ main {
     width: 63%;
     margin: 0 auto;
     position: relative;
+}
+
+.device {
+    margin: 12px 0;
+    z-index: 10;
 }
 
 .emoji {

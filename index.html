@@ -13,13 +13,13 @@
 
 <body>
     <!-- Header -->
-    <header id="header" class="align-center fill-screen static">
+    <header class="align-center fill-screen static">
         <div class="fill-screen">
             <div class="center">
                 <h1 class="align-center text-white title">Scott Mangiapane</h1>
             </div>
             <span class="center-items fill-screen scroll-wrapper">
-            <a href="#main">
+            <a id="scroll-link" href="#main">
                 <span class="scroll-background-large"></span>
             <span class="scroll-background-small"></span>
             <img alt="scroll" class="scroll-icon" src="/img/scroll.svg">
@@ -146,10 +146,10 @@
                             </div>
                         </div>
                         <div class="d-none d-md-block col-md-6">
-                            <img alt="Android Demo" class="demo" src="/img/devices/phone.svg">
-                            <img alt="Card Cliques" id="demo-card-cliques" class="center demo-overlay-android" src="/img/screenshots/card-cliques.svg">
-                            <img alt="Quackcryption" id="demo-quackcryption" class="center demo-overlay-android" src="/img/screenshots/quackcryption.svg">
-                            <img alt="Calculator v2" id="demo-calculator-v2" class="center demo-overlay-android" src="/img/screenshots/calculator-v2.svg">
+                            <img alt="Android Demo" class="device" src="/img/devices/phone.svg">
+                            <img alt="Card Cliques" id="demo-card-cliques" class="center demo demo-android" src="/img/screenshots/card-cliques.svg">
+                            <img alt="Quackcryption" id="demo-quackcryption" class="center demo demo-android" src="/img/screenshots/quackcryption.svg">
+                            <img alt="Calculator v2" id="demo-calculator-v2" class="center demo demo-android" src="/img/screenshots/calculator-v2.svg">
                         </div>
                     </div>
                 </div>
@@ -160,9 +160,9 @@
             <div class="demo-wrapper-js">
                 <div class="row">
                     <div class="d-none d-md-block col-md-7">
-                        <img alt="JavaScript Demo" class="demo" src="/img/devices/browser.svg">
-                        <img alt="Truth Table Generator" id="demo-truth-table-generator" class="center demo-overlay-js" src="/img/screenshots/truth-table-generator.svg">
-                        <img alt="Nix.js" id="demo-nix-js" class="center demo-overlay-js" src="/img/screenshots/nix-js.svg">
+                        <img alt="JavaScript Demo" class="device" src="/img/devices/browser.svg">
+                        <img alt="Truth Table Generator" id="demo-truth-table-generator" class="center demo demo-js" src="/img/screenshots/truth-table-generator.svg">
+                        <img alt="Nix.js" id="demo-nix-js" class="center demo demo-js" src="/img/screenshots/nix-js.svg">
                     </div>
                     <div class="col-xs-12 col-md-5">
                         <h1 class="align-center"><span class="text-emphasis">JavaScript</span> things</h1>
@@ -218,14 +218,14 @@
                             </div>
                         </div>
                         <div class="d-none d-md-block col-md-6">
-                            <img alt="Calculator Demo" class="demo" src="/img/devices/calculator.svg">
-                            <video id="demo-ti-games" class="center demo-overlay-calculator" autoplay loop muted>
+                            <img alt="Calculator Demo" class="device" src="/img/devices/calculator.svg">
+                            <video id="demo-ti-games" class="center demo demo-calculator" autoplay loop muted>
                                 <source src="/img/screenshots/calculator/ti-games.mp4" type="video/mp4" />
                             </video>
-                            <video id="demo-alphacs" class="center demo-overlay-calculator" autoplay loop muted>
+                            <video id="demo-alphacs" class="center demo demo-calculator" autoplay loop muted>
                                 <source src="/img/screenshots/calculator/alphacs.mp4" type="video/mp4" />
                             </video>
-                            <video id="demo-ti-terminal" class="center demo-overlay-calculator" autoplay loop muted>
+                            <video id="demo-ti-terminal" class="center demo demo-calculator" autoplay loop muted>
                                 <source src="/img/screenshots/calculator/ti-terminal.mp4" type="video/mp4" />
                             </video>
                         </div>
@@ -234,7 +234,7 @@
             </div>
         </div>
         <!-- About me -->
-        <div id="about" class="block container">
+        <div class="block container">
             <div class="row">
                 <div class="align-center col-md-6">
                     <img alt="Androidify" class="android" src="/img/robot.svg">
@@ -252,33 +252,25 @@
                         that was getting ready for launch. I used Java, JavaScript, React, PostgreSQL, and Node.js.
                     </p>
                     <div class="spacer-vertical"></div>
-                    <script src="/js/email.js"></script>
-                    <div class="spacer-horizontal"></div>
-                    <noscript>
-                        <p><span class="text-emphasis">Error:</span> since I use JavaScript to hide my email address from bots,
-                            you need to have Javascript enabled to see my email. Please enable javascript in your browser's
-                            settings and refresh this page.</p>
-                        <div class="spacer-vertical"></div>
-                    </noscript>
                     <span class="popup-wrapper">
-                    <a class="button" href="resume.pdf">Resume</a>
-                    <span class="popup">
-                        <p class="remove-margins">I'm currently looking for an internship</p>
-                    </span>
+                        <a class="button" href="resume.pdf">Resume</a>
+                        <span class="popup">
+                            <p class="remove-margins">I'm currently looking for an internship</p>
+                        </span>
                     </span>
                     <div class="spacer-horizontal"></div>
                     <span class="popup-wrapper">
-                    <a class="button" href="https://github.com/scottmangiapane">Github</a>
-                    <span class="popup">
-                        <p class="remove-margins">Check out my projects</p>
-                    </span>
+                        <a class="button" href="https://github.com/scottmangiapane">Github</a>
+                        <span class="popup">
+                            <p class="remove-margins">Check out my projects</p>
+                        </span>
                     </span>
                 </div>
             </div>
         </div>
     </main>
     <!-- Footer -->
-    <footer id="footer" class="tint">
+    <footer class="tint">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -290,8 +282,6 @@
             </div>
         </div>
     </footer>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-1.2.min.js" integrity="sha256-EA4aFzphEyGP+0nhOhR3j6O5H/f82frFxSO67bDxt/s=" crossorigin="anonymous"></script>
     <!-- Custom Scripts -->
     <script src="/js/demo.js"></script>
     <script src="/js/scroll.js"></script>

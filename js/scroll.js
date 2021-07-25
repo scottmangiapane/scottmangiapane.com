@@ -1,6 +1,12 @@
-$('a').click(function () {
-    $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top
-    }, 500);
-    return false;
-});
+const link = document.getElementById('scroll-link');
+
+link.onclick = (e) => {
+    e.preventDefault();
+    const hash = link.getAttribute('href');
+    const target = document.querySelector(hash);
+
+    window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+    });
+};
