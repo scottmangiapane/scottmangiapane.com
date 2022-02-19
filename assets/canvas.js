@@ -36,13 +36,12 @@ function initialize() {
 }
 
 function frame() {
-    requestAnimationFrame(frame);
-
     clearFrame();
     drawBinary();
     drawOverlay();
 
     offset = (offset + 1) % width;
+    requestAnimationFrame(frame);
 }
 
 function clearFrame() {
