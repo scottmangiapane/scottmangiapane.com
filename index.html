@@ -1,39 +1,387 @@
 <!DOCTYPE html>
-<html class="fill" lang="en">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="I'm a Senior Software Engineer in Phoenix, AZ.">
+    <link href="https://fonts.googleapis.com/icon?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Scott Mangiapane</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="/assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&family=Roboto:wght@900&display=swap">
 </head>
 
-<body class="fill">
-    <canvas class="fade-in fill" id="canvas"></canvas>
-    <div class="card card-left row">
-        <a href="https://github.com/scottmangiapane" target="_blank" class="text-center">
-            <svg class="icon" enable-background="new 0 0 32.6 31.8" version="1.1" viewBox="0 0 32.6 31.8" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-                <path d="m16.3 0c-9 0-16.3 7.3-16.3 16.3 0 7 4.5 13.3 11.2 15.5 0.8 0.1 1.1-0.4 1.1-0.8s0-1.4 0-2.8c-4.6 1-5.5-2.2-5.5-2.2-0.3-1-0.9-1.8-1.8-2.4-1.5-1 0.1-1 0.1-1 1 0.1 2 0.8 2.5 1.7 0.9 1.7 3 2.3 4.7 1.4 0.1-0.8 0.4-1.6 1-2.2-3.6-0.4-7.4-1.8-7.4-8 0-1.6 0.6-3.2 1.7-4.4-0.5-1.4-0.5-3 0.1-4.3 0 0 1.4-0.4 4.5 1.7 2.7-0.7 5.5-0.7 8.2 0 3.1-2.1 4.5-1.7 4.5-1.7 0.6 1.4 0.6 2.9 0.1 4.3 1.1 1.2 1.7 2.8 1.7 4.4 0 6.3-3.8 7.6-7.4 8 0.8 0.8 1.2 1.9 1.1 3v4.5s0.3 0.9 1.1 0.8c8.5-2.9 13-12.2 10.1-20.7-2.3-6.6-8.4-11-15.3-11.1z"/>
-            </svg>
-            <p>GitHub</p>
-        </a>
-    </div>
-    <div class="card card-right row">
-        <a href="https://www.linkedin.com/in/scottmangiapane" target="_blank" class="text-center">
-            <svg class="icon" enable-background="new 0 0 36 36" version="1.1" viewBox="0 0 36 36" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-                <path d="m33.3 0h-30.6c-1.5 0-2.7 1.1-2.7 2.6v30.8c0 1.5 1.2 2.6 2.7 2.6h30.7c1.5 0 2.6-1.1 2.7-2.6v-30.8c-0.1-1.5-1.3-2.6-2.8-2.6zm-22.6 30.7h-5.4v-17.2h5.4v17.2zm-2.7-19.6c-1.7 0-3.1-1.4-3.1-3.1s1.4-3.1 3.1-3.1 3.1 1.4 3.1 3.1c0 1.8-1.4 3.1-3.1 3.1zm22.7 19.6h-5.3v-8.4c0-2 0-4.5-2.8-4.5s-3.2 2.2-3.2 4.4v8.5h-5.4v-17.2h5.1v2.3h0.1c1-1.8 3-2.8 5-2.8 5.4 0 6.4 3.6 6.4 8.2l0.1 9.5z"/>
-            </svg>
-            <p>LinkedIn</p>
-        </a>
-    </div>
-    <script src="/assets/canvas.js"></script>
+<body>
+    <!-- Header -->
+    <header id="header" class="align-center fill-screen static">
+        <div class="fill-screen">
+            <div class="center">
+                <h1 class="align-center text-white title">Scott Mangiapane</h1>
+            </div>
+            <span class="flex scroll-wrapper">
+            <a href="#main">
+                <span class="scroll-background-large"></span>
+            <span class="scroll-background-small"></span>
+            <img alt="scroll" class="scroll-icon" src="assets/img/scroll.svg">
+            </a>
+            </span>
+        </div>
+    </header>
+    <main id="main">
+        <!-- Skills -->
+        <div id="skills" class="block container">
+            <h1>Some of my <span class="text-emphasis">mad skills</span></h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <table>
+                        <tr class="align-center">
+                            <td class="align-center">
+                                <div class="badge">
+                                    <img alt="Java" src="assets/img/logos/java.svg">
+                                </div>
+                                <p>Java</p>
+                            </td>
+                            <td class="align-center stretch">
+                                <div class="progress">
+                                    <div aria-valuenow="80" aria-valuemax="100" aria-valuemin="0" class="progress-bar progress-bar-striped active" role="progressbar"
+                                        style="width:80%">
+                                        <span class="sr-only">80% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-sm-6">
+                    <table>
+                        <tr class="align-center">
+                            <td class="align-center">
+                                <div class="badge">
+                                    <img alt="Android" src="assets/img/logos/android.svg">
+                                </div>
+                                <p>Android</p>
+                            </td>
+                            <td class="align-center stretch">
+                                <div class="progress">
+                                    <div aria-valuenow="70" aria-valuemax="100" aria-valuemin="0" class="progress-bar progress-bar-striped active" role="progressbar"
+                                        style="width:70%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix hidden-xs"></div>
+                <div class="col-sm-6">
+                    <table>
+                        <tr class="align-center">
+                            <td class="align-center">
+                                <div class="badge">
+                                    <img alt="JavaScript" src="assets/img/logos/js.svg">
+                                </div>
+                                <p>JavaScript</p>
+                            </td>
+                            <td class="align-center stretch">
+                                <div class="progress">
+                                    <div aria-valuenow="50" aria-valuemax="100" aria-valuemin="0" class="progress-bar progress-bar-striped active" role="progressbar"
+                                        style="width:50%">
+                                        <span class="sr-only">50% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-sm-6">
+                    <table>
+                        <tr class="align-center">
+                            <td class="align-center">
+                                <div class="badge">
+                                    <img alt="HTML / CSS" src="assets/img/logos/html-css.svg">
+                                </div>
+                                <p>HTML/CSS</p>
+                            </td>
+                            <td class="align-center stretch">
+                                <div class="progress">
+                                    <div aria-valuenow="80" aria-valuemax="100" aria-valuemin="0" class="progress-bar progress-bar-striped active" role="progressbar"
+                                        style="width:80%">
+                                        <span class="sr-only">80% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix hidden-xs"></div>
+                <div class="col-sm-6">
+                    <table>
+                        <tr class="align-center">
+                            <td class="align-center">
+                                <div class="badge">
+                                    <img alt="Python" src="assets/img/logos/python.svg">
+                                </div>
+                                <p>Python</p>
+                            </td>
+                            <td class="align-center stretch">
+                                <div class="progress">
+                                    <div aria-valuenow="70" aria-valuemax="100" aria-valuemin="0" class="progress-bar progress-bar-striped active" role="progressbar"
+                                        style="width:70%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-sm-6">
+                    <table>
+                        <tr class="align-center">
+                            <td class="align-center">
+                                <div class="badge">
+                                    <img alt="C/C++" src="assets/img/logos/c.svg">
+                                </div>
+                                <p>C/C++</p>
+                            </td>
+                            <td class="align-center stretch">
+                                <div class="progress">
+                                    <div aria-valuenow="50" aria-valuemax="100" aria-valuemin="0" class="progress-bar progress-bar-striped active" role="progressbar"
+                                        style="width:50%">
+                                        <span class="sr-only">50% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix hidden-xs"></div>
+                <div class="col-sm-6">
+                    <table>
+                        <tr class="align-center">
+                            <td class="align-center">
+                                <div class="badge">
+                                    <img alt="SQL" src="assets/img/logos/sql.svg">
+                                </div>
+                                <p>SQL</p>
+                            </td>
+                            <td class="align-center stretch">
+                                <div class="progress">
+                                    <div aria-valuenow="40" aria-valuemax="100" aria-valuemin="0" class="progress-bar progress-bar-striped active" role="progressbar"
+                                        style="width:40%">
+                                        <span class="sr-only">40% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-sm-6">
+                    <table>
+                        <tr class="align-center">
+                            <td class="align-center">
+                                <div class="badge">
+                                    <img alt="Node.js" src="assets/img/logos/nodejs.svg">
+                                </div>
+                                <p>Node.js</p>
+                            </td>
+                            <td class="align-center stretch">
+                                <div class="progress">
+                                    <div aria-valuenow="60" aria-valuemax="100" aria-valuemin="0" class="progress-bar progress-bar-striped active" role="progressbar"
+                                        style="width:60%">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Android -->
+        <div id="android" class="block tint">
+            <div class="container">
+                <div class="row">
+                    <div class="demo-wrapper-android">
+                        <div class="col-xs-12 col-sm-6">
+                            <h1 class="align-center">My <span class="text-emphasis">Android</span> projects</h1>
+                            <div class="relative">
+                                <div id="card-card-cliques" class="card slide">
+                                    <div class="card-color card-color-red">
+                                        <p class="text-emphasis inline text-white">Card Cliques</p>
+                                    </div>
+                                    <p>Card Cliques is a fun and challenging card game in which players find three cards where
+                                        each trait (color, shape, fill, or number) is all different or all the same.
+                                    </p>
+                                </div>
+                                <div id="card-quackcryption" class="card slide">
+                                    <div class="card-color card-color-yellow">
+                                        <p class="text-emphasis inline text-white">Quackcryption</p>
+                                    </div>
+                                    <p>Quackcryption uses 128 bit AES encryption to turn standard text into an encrypted string.
+                                        It won the prize for Best Developer Tool at SpartaHack 2016. It's "unquackable"!
+                                    </p>
+                                </div>
+                                <div id="card-calculator-v2" class="card slide">
+                                    <div class="card-color card-color-blue">
+                                        <p class="text-emphasis inline text-white">Calculator v2</p>
+                                    </div>
+                                    <p>Calculator v2 is an advanced calculator with functions such as trigonometry, logs, factorials,
+                                        and more while still maintaining a simple and easy to use interface.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-xs col-sm-6">
+                            <img alt="Android Demo" class="demo" src="assets/img/devices/phone.svg">
+                            <img alt="Card Cliques" id="demo-card-cliques" class="center demo-overlay-android" src="assets/img/screenshots/card-cliques.svg">
+                            <img alt="Quackcryption" id="demo-quackcryption" class="center demo-overlay-android" src="assets/img/screenshots/quackcryption.svg">
+                            <img alt="Calculator v2" id="demo-calculator-v2" class="center demo-overlay-android" src="assets/img/screenshots/calculator-v2.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JavaScript -->
+        <div id="javascript" class="block container">
+            <div class="row">
+                <div class="demo-wrapper-js">
+                    <div class="hidden-xs col-sm-7">
+                        <img alt="JavaScript Demo" class="demo" src="assets/img/devices/browser.svg">
+                        <img alt="Truth Table Generator" id="demo-truth-table-generator" class="center demo-overlay-js" src="assets/img/screenshots/truth-table-generator.svg">
+                        <img alt="Nix.js" id="demo-nix-js" class="center demo-overlay-js" src="assets/img/screenshots/nix-js.svg">
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+                        <h1 class="align-center"><span class="text-emphasis">JavaScript</span> things</h1>
+                        <div id="card-truth-table-generator" class="card slide">
+                            <div class="card-color card-color-teal">
+                                <p class="text-emphasis inline text-white">Truth Table Generator</p>
+                            </div>
+                            <p>Truth Table Generator is a web app to help users make truth tables quickly and easily. It is
+                                intended for people building circuits with logic gates.</p>
+                        </div>
+                        <div id="card-nix-js" class="card slide">
+                            <div class="card-color card-color-green">
+                                <p class="text-emphasis inline text-white">Nix.js</p>
+                            </div>
+                            <p>Nix.js is an OS for your browser, similar to UNIX and written entirely in JavaScript. It has
+                                a CLI, a virtual file system, and a package manager.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TI 84 -->
+        <div id="android" class="block tint">
+            <div class="container">
+                <div class="row">
+                    <div class="demo-wrapper-calculator">
+                        <div class="col-xs-12 col-sm-6">
+                            <h1 class="align-center">My <span class="text-emphasis">TI 84</span> stuff</h1>
+                            <div class="relative">
+                                <div id="card-ti-games" class="card slide">
+                                    <div class="card-color card-color-indigo">
+                                        <p class="text-emphasis inline text-white">TI Games</p>
+                                    </div>
+                                    <p>Wouldn't it be great if you could play your favorite smartphone games on your graphing
+                                        calculator? Now you can, and math class will never be boring again.
+                                    </p>
+                                </div>
+                                <div id="card-alphacs" class="card slide">
+                                    <div class="card-color card-color-lime">
+                                        <p class="text-emphasis inline text-white">AlphaCS</p>
+                                    </div>
+                                    <p>AlphaCS edits the Virtual Allocation Table to unlock hidden features such as hiding and
+                                        locking programs. It integrates with zStart to serve as a program launcher.
+                                    </p>
+                                </div>
+                                <div id="card-ti-terminal" class="card slide">
+                                    <div class="card-color card-color-blue-gray">
+                                        <p class="text-emphasis inline text-white">TI Terminal</p>
+                                    </div>
+                                    <p>This app uses inline assembly to fetch data that would otherwise be unavailable, such
+                                        as battery life, hidden files, RAM usage, and a full set of program management features.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-xs col-sm-6">
+                            <img alt="Calculator Demo" class="demo" src="assets/img/devices/calculator.svg">
+                            <video id="demo-ti-games" class="center demo-overlay-calculator" autoplay loop muted>
+                                <source src="assets/img/screenshots/calculator/ti-games.mp4" type="video/mp4" />
+                            </video>
+                            <video id="demo-alphacs" class="center demo-overlay-calculator" autoplay loop muted>
+                                <source src="assets/img/screenshots/calculator/alphacs.mp4" type="video/mp4" />
+                            </video>
+                            <video id="demo-ti-terminal" class="center demo-overlay-calculator" autoplay loop muted>
+                                <source src="assets/img/screenshots/calculator/ti-terminal.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About me -->
+        <div id="about" class="block container">
+            <div class="row">
+                <div class="align-center col-sm-6">
+                    <img alt="Androidify" class="android" src="assets/img/robot.svg">
+                </div>
+                <div class="col-sm-6">
+                    <div class="spacer-vertical visible-xs"></div>
+                    <h1>A little bit <span class="text-emphasis">about myself</span></h1>
+                    <p>Hello! I'm Scott, a computer science student at Purdue University. I first started programming during
+                        my second year of high school, when I made simple games on my TI-84 graphing calculator and gave
+                        them to my classmates. Now I build websites, mobile apps, and essentially anything that I think sounds
+                        awesome.
+                    </p>
+                    <h1>My <span class="text-emphasis">experience</span></h1>
+                    <p>Last summer, I interned at GoDaddy, where I helped develop and test the dashboard and API for a new product
+                        that was getting ready for launch. I used Java, JavaScript, React, PostgreSQL, and Node.js.
+                    </p>
+                    <div class="spacer-vertical"></div>
+                    <script src="assets/js/email.js"></script>
+                    <div class="spacer-horizontal"></div>
+                    <noscript>
+                        <p><span class="text-emphasis">Error:</span> since I use JavaScript to hide my email address from bots,
+                            you need to have Javascript enabled to see my email. Please enable javascript in your browser's
+                            settings and refresh this page.</p>
+                        <div class="spacer-vertical"></div>
+                    </noscript>
+                    <span class="popup-wrapper">
+                    <a class="button" href="resume.pdf">RESUME</a>
+                    <span class="popup">
+                        <p class="remove-margins">I'm currently looking for an internship</p>
+                    </span>
+                    </span>
+                    <div class="spacer-horizontal"></div>
+                    <span class="popup-wrapper">
+                    <a class="button" href="https://github.com/scottmangiapane">GITHUB</a>
+                    <span class="popup">
+                        <p class="remove-margins">Check out my projects</p>
+                    </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer id="footer" class="tint">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="remove-margins">Made with <img class="emoji" src="assets/img/cactus.svg"> in Phoenix, AZ</p>
+                </div>
+                <div class="col-sm-6">
+                    <p class="align-right remove-margins">© 2016 Scott Mangiapane</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.2.min.js" integrity="sha256-EA4aFzphEyGP+0nhOhR3j6O5H/f82frFxSO67bDxt/s=" crossorigin="anonymous"></script>
+    <!-- Custom Scripts -->
+    <script src="assets/js/demo.js"></script>
+    <script src="assets/js/scroll.js"></script>
 </body>
 
 </html>
