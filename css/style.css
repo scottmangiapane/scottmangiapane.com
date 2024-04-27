@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 } */
 
 header {
-    background: #2196F3;
+    background: #022b36;
 }
 
 header > div {
@@ -158,7 +158,7 @@ main {
 }
 
 .button, .button:focus:not(:active) {
-    background-color: #2196F3;
+    background-color: #2196f3;
     border-radius: 2px;
     color: white;
     display: inline-block;
@@ -191,6 +191,7 @@ main {
     text-align: center;
     transform-style: preserve-3d;
     transition: all .2s ease-in-out;
+    width: 100%;
 }
 
 .card:hover {
@@ -205,15 +206,15 @@ main {
 }
 
 .card-color-blue {
-    background-color: #03A9F4;
+    background-color: #03a9f4;
 }
 
 .card-color-green {
-    background-color: #4CAF50;
+    background-color: #4caf50;
 }
 
 .card-color-indigo {
-    background-color: #3F51B5;
+    background-color: #3f51b5;
 }
 
 .card-color-red {
@@ -225,11 +226,11 @@ main {
 }
 
 .card-color-yellow {
-    background-color: #FDD835;
+    background-color: #fdd835;
 }
 
 .card-color-lime {
-    background-color: #CDDC39;
+    background-color: #cddc39;
 }
 
 .card-color-blue-gray {
@@ -302,11 +303,7 @@ main {
     height: 20px;
 }
 
-.fade-down {
-    animation: fade-down 1s;
-}
-
-.fill-screen {
+.fill {
     width: 100%;
     height: 100%;
 }
@@ -359,17 +356,17 @@ main {
     top: 35px;
 }
 
+.portrait {
+    border-radius: 50%; max-width: 256px;
+}
+
 .progress {
     margin-left: 20px;
     transform: translateZ(0);
 }
 
 .progress-bar {
-    background-color: #0277BD;
-}
-
-.relative {
-    position: relative;
+    background-color: #0277Bd;
 }
 
 .remove-margins {
@@ -421,6 +418,14 @@ main {
     transform: scale(2.5);
 }
 
+.shadow-dark {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.14), 0 0 20px rgba(0, 0, 0, 0.26);
+}
+
+.shadow-dark-text {
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.28), 0 0 20px rgba(0, 0, 0, 0.52);
+}
+
 .spacer-horizontal {
     display: inline;
     margin-left: 15px;
@@ -457,6 +462,22 @@ main {
 .title {
     font-size: 95px;
     font-weight: 500;
+}
+
+.video-player {
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.video-player iframe {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
 }
 
 /* Miscellaneous */
@@ -565,10 +586,6 @@ main {
         opacity: 1;
     }
 
-    .slide-animation {
-        animation: slide 0s;
-    }
-
     .title {
         font-size: 58px;
     }
@@ -581,7 +598,7 @@ main {
     }
 
     .button:hover:not(:active) {
-        background-color: #2196F3;
+        background-color: #2196f3;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         transform: scale(1);
     }

@@ -18,7 +18,7 @@ function getDemo(name) {
     return document.getElementById('demo-' + name);
 }
 
-window.onload = () => {
+window.addEventListener('load', () => {
     for (const group of groups) {
         const demo = getDemo(group[0]);
         demo.style.opacity = 1;
@@ -41,4 +41,4 @@ window.onload = () => {
             };
         }
     }
-};
+});

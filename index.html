@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css">
@@ -11,23 +11,109 @@
     <title>Scott Mangiapane</title>
 </head>
 
+<!-- About -->
+<!-- Career -->
+<!-- Projects -->
+<!-- Piano -->
+<!-- Chess -->
+
 <body>
     <!-- Header -->
-    <header class="align-center fill-screen static">
-        <div class="fill-screen">
+    <header class="align-center fill static">
+        <div class="fill">
+            <canvas id="canvas" class="fill"></canvas>
             <div class="center">
-                <h1 class="align-center text-white title">Scott Mangiapane</h1>
+                <img alt="Portrait" class="portrait shadow-dark" src="/img/portrait.jpg">
+                <h1 class="align-center shadow-dark-text text-white title">Scott Mangiapane</h1>
             </div>
-            <span class="center-items fill-screen scroll-wrapper">
+            <span class="center-items fill scroll-wrapper">
             <a id="scroll-link" href="#main">
                 <span class="scroll-background-large"></span>
             <span class="scroll-background-small"></span>
-            <img alt="scroll" class="scroll-icon" src="/img/scroll.svg">
+            <img alt="scroll" class="scroll-icon shadow-dark-text" src="/img/scroll.svg">
             </a>
             </span>
         </div>
     </header>
     <main id="main">
+        <!-- Piano -->
+        <div id="chess" class="block container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Some <span class="text-emphasis">Piano</span></h1>
+                    <p>I'm a casual piano player- I don't know theory, and I don't use a metronome so my timing is all over the place. But it's a lot of fun and I've memorized quite a bit of music at this point.</p>
+                    <p>This song is my favorite, "Baba Yetu". It was originally composed by <a href="https://www.youtube.com/@christophertin">@christophertin</a> for the game Civilization IV. The cover I play in the video was arranged by <a href="https://www.youtube.com/@lara6683">@lara6683</a>.
+                    </p>
+                    <div class="spacer-vertical"></div>
+                    <span class="popup-wrapper">
+                        <a class="button" href="https://www.youtube.com/@scottmangiapane/videos" target="_blank">YouTube</a>
+                        <span class="popup">
+                            <p class="remove-margins">See what I've been up to</p>
+                        </span>
+                    </span>
+                    <div class="spacer-vertical"></div>
+                </div>
+                <div class="align-center col-md-6">
+                    <div class="video-player">
+                        <iframe
+                            src="https://www.youtube.com/embed/GjVPqlyDlGA"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            frameborder="0"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            title="Baba Yetu"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chess -->
+        <div id="chess" class="block tint">
+            <div class="container">
+                <h1><span class="text-emphasis">Chess</span> stats</h1>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card slide">
+                            <div class="card-color card-color-blue-gray">
+                                <p class="text-emphasis inline text-white">Rapid</p>
+                            </div>
+                            <p>Rating:</p>
+                            <p><span id="chess-rapid-rating">____</span></p>
+                            <p>Last Played:</p>
+                            <p><span id="chess-rapid-last-played">____</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card slide">
+                            <div class="card-color card-color-blue-gray">
+                                <p class="text-emphasis inline text-white">Blitz</p>
+                            </div>
+                            <p>Rating:</p>
+                            <p><span id="chess-blitz-rating">____</span></p>
+                            <p>Last Played:</p>
+                            <p><span id="chess-blitz-last-played">____</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card slide">
+                            <div class="card-color card-color-blue-gray">
+                                <p class="text-emphasis inline text-white">Bullet</p>
+                            </div>
+                            <p>Rating:</p>
+                            <p><span id="chess-bullet-rating">____</span></p>
+                            <p>Last Played:</p>
+                            <p><span id="chess-bullet-last-played">____</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-vertical"></div>
+                <span class="popup-wrapper">
+                    <a class="button" href="https://www.chess.com/member/scottmangiapane" target="_blank">Chess.com</a>
+                    <span class="popup">
+                        <p class="remove-margins">Challenge me to a game</p>
+                    </span>
+                </span>
+            </div>
+        </div>
         <!-- Skills -->
         <div id="skills" class="block container">
             <h1>Some of my <span class="text-emphasis">skills</span></h1>
@@ -118,31 +204,26 @@
                 <div class="demo-wrapper-android">
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
-                            <h1 class="align-center">My <span class="text-emphasis">Android</span> projects</h1>
-                            <div class="relative">
-                                <div id="card-card-cliques" class="card slide">
-                                    <div class="card-color card-color-red">
-                                        <p class="text-emphasis inline text-white">Card Cliques</p>
-                                    </div>
-                                    <p>Card Cliques is a fun and challenging card game in which players find three cards where
-                                        each trait (color, shape, fill, or number) is all different or all the same.
-                                    </p>
+                            <h1 class="align-center"><span class="text-emphasis">Android</span> projects</h1>
+                            <div id="card-card-cliques" class="card slide">
+                                <div class="card-color card-color-red">
+                                    <p class="text-emphasis inline text-white">Card Clicks</p>
                                 </div>
-                                <div id="card-quackcryption" class="card slide">
-                                    <div class="card-color card-color-yellow">
-                                        <p class="text-emphasis inline text-white">Quackcryption</p>
-                                    </div>
-                                    <p>Quackcryption uses AES encryption to turn standard text into an encrypted string.
-                                        It won the prize for Best Developer Tool at SpartaHack 2016. It's "unquackable"!
-                                    </p>
+                                <p>Card Clicks is a fun and challenging card game in which players find three cards where each trait (color, shape, fill, or number) is all different or all the same.
+                                </p>
+                            </div>
+                            <div id="card-quackcryption" class="card slide">
+                                <div class="card-color card-color-yellow">
+                                    <p class="text-emphasis inline text-white">Quackcryption</p>
                                 </div>
-                                <div id="card-calculator-v2" class="card slide">
-                                    <div class="card-color card-color-blue">
-                                        <p class="text-emphasis inline text-white">Calculator v2</p>
-                                    </div>
-                                    <p>Calculator v2 is an advanced calculator with functions such as trigonometry, logs, factorials,
-                                        and more while still maintaining a simple and easy to use interface.</p>
+                                <p>Quackcryption uses AES encryption to turn standard text into an encrypted string. It won the prize for Best Developer Tool at SpartaHack 2016. It's "unquackable"!
+                                </p>
+                            </div>
+                            <div id="card-calculator-v2" class="card slide">
+                                <div class="card-color card-color-blue">
+                                    <p class="text-emphasis inline text-white">Calculator v2</p>
                                 </div>
+                                <p>Calculator v2 is an advanced calculator with functions such as trigonometry, logs, factorials, and more while still maintaining a simple and easy to use interface.</p>
                             </div>
                         </div>
                         <div class="d-none d-md-block col-md-6">
@@ -176,8 +257,7 @@
                             <div class="card-color card-color-green">
                                 <p class="text-emphasis inline text-white">Nix.js</p>
                             </div>
-                            <p>Nix.js is a JS-based, UNIX-like OS that lives in your browser. It has
-                                a CLI, a virtual file system, and a package manager.</p>
+                            <p>Nix.js is a JS-based, UNIX-like OS that lives in your browser. It has a CLI, a virtual file system, and a package manager.</p>
                         </div>
                     </div>
                 </div>
@@ -189,32 +269,27 @@
                 <div class="demo-wrapper-calculator">
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
-                            <h1 class="align-center">My <span class="text-emphasis">TI 84</span> stuff</h1>
-                            <div class="relative">
-                                <div id="card-ti-games" class="card slide">
-                                    <div class="card-color card-color-indigo">
-                                        <p class="text-emphasis inline text-white">TI Games</p>
-                                    </div>
-                                    <p>Wouldn't it be great if you could play your favorite smartphone games on your graphing
-                                        calculator? Now you can, and math class will never be boring again.
-                                    </p>
+                            <h1 class="align-center"><span class="text-emphasis">TI 84</span> stuff</h1>
+                            <div id="card-ti-games" class="card slide">
+                                <div class="card-color card-color-indigo">
+                                    <p class="text-emphasis inline text-white">TI Games</p>
                                 </div>
-                                <div id="card-alphacs" class="card slide">
-                                    <div class="card-color card-color-lime">
-                                        <p class="text-emphasis inline text-white">AlphaCS</p>
-                                    </div>
-                                    <p>AlphaCS edits the Virtual Allocation Table to unlock hidden features such as hiding and
-                                        locking programs. It integrates with zStart to serve as a program launcher.
-                                    </p>
+                                <p>Wouldn't it be great if you could play your favorite smartphone games on your graphing calculator? Now you can, and math class will never be boring again.
+                                </p>
+                            </div>
+                            <div id="card-alphacs" class="card slide">
+                                <div class="card-color card-color-lime">
+                                    <p class="text-emphasis inline text-white">AlphaCS</p>
                                 </div>
-                                <div id="card-ti-terminal" class="card slide">
-                                    <div class="card-color card-color-blue-gray">
-                                        <p class="text-emphasis inline text-white">TI Terminal</p>
-                                    </div>
-                                    <p>This app uses inline assembly to fetch data that would otherwise be unavailable, such
-                                        as battery life, hidden files, RAM usage, and a full set of program management features.
-                                    </p>
+                                <p>AlphaCS edits the Virtual Allocation Table to unlock hidden features such as hiding and locking programs. It integrates with zStart to serve as a program launcher.
+                                </p>
+                            </div>
+                            <div id="card-ti-terminal" class="card slide">
+                                <div class="card-color card-color-blue-gray">
+                                    <p class="text-emphasis inline text-white">TI Terminal</p>
                                 </div>
+                                <p>This app uses inline assembly to fetch data that would otherwise be unavailable, such as battery life, hidden files, RAM usage, and a full set of program management features.
+                                </p>
                             </div>
                         </div>
                         <div class="d-none d-md-block col-md-6">
@@ -237,32 +312,31 @@
         <div class="block container">
             <div class="row">
                 <div class="align-center col-md-6">
-                    <img alt="Androidify" class="android" src="/img/robot.svg">
+                    <img alt="Portrait" class="portrait" src="/img/kayak.png">
                 </div>
                 <div class="col-md-6">
-                    <div class="spacer-vertical visible-xs"></div>
+                    <div class="spacer-vertical"></div>
                     <h1>A little bit <span class="text-emphasis">about myself</span></h1>
-                    <p>Hello! I'm Scott, a computer science student at Purdue University. I first started programming during
-                        my second year of high school, when I made simple games on my TI-84 graphing calculator and gave
-                        them to my classmates. Now I build websites, mobile apps, and essentially anything that I think sounds
-                        awesome.
-                    </p>
-                    <h1>My <span class="text-emphasis">experience</span></h1>
-                    <p>Last summer, I interned at GoDaddy, where I helped develop and test the dashboard and API for a new product
-                        that was getting ready for launch. I used Java, JavaScript, React, PostgreSQL, and Node.js.
+                    <p>I'm Scott Mangiapane, a software engineer in Chicago, IL. I first started programming on my TI-84 graphing calculator back in high school math class. I've come a long way since then, but have maintained that same enthusiasm. Check out what I've been up to above.
                     </p>
                     <div class="spacer-vertical"></div>
                     <span class="popup-wrapper">
-                        <a class="button" href="resume.pdf">Resume</a>
+                        <a class="button" href="https://github.com/scottmangiapane" target="_blank">Github</a>
                         <span class="popup">
-                            <p class="remove-margins">I'm currently looking for an internship</p>
+                            <p class="remove-margins">Check out my projects</p>
                         </span>
                     </span>
                     <div class="spacer-horizontal"></div>
-                    <span class="popup-wrapper">
-                        <a class="button" href="https://github.com/scottmangiapane">Github</a>
+                    <!-- <span class="popup-wrapper">
+                        <a class="button" href="https://github.com/scottmangiapane" target="_blank">LinkedIn</a>
                         <span class="popup">
-                            <p class="remove-margins">Check out my projects</p>
+                            <p class="remove-margins">Connect with me on LinkedIn</p>
+                        </span>
+                    </span> -->
+                    <span class="popup-wrapper">
+                        <a class="button" href="https://www.youtube.com/@scottmangiapane/videos" target="_blank">YouTube</a>
+                        <span class="popup">
+                            <p class="remove-margins">I occassionally play piano</p>
                         </span>
                     </span>
                 </div>
@@ -273,16 +347,16 @@
     <footer class="tint">
         <div class="container">
             <div class="row">
+                <div class="col-md-6"></div>
                 <div class="col-md-6">
-                    <p class="remove-margins">Made with <img class="emoji" src="/img/cactus.svg"> in Phoenix, AZ</p>
-                </div>
-                <div class="col-md-6">
-                    <p class="align-right remove-margins">© 2016 Scott Mangiapane</p>
+                    <p class="align-right remove-margins">© 2024 Scott Mangiapane</p>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Custom Scripts -->
+    <script src="/js/canvas.js"></script>
+    <script src="/js/chess.js"></script>
     <script src="/js/demo.js"></script>
     <script src="/js/scroll.js"></script>
 </body>
