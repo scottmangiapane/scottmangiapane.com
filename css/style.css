@@ -110,34 +110,6 @@ main {
     width: 6em;
 }
 
-.bar {
-    animation: bar 1s linear infinite;
-    background-image: linear-gradient(
-        -45deg,
-        #2196f3 25%,
-        #42a5f5 25%,
-        #42a5f5 50%,
-        #2196f3 50%,
-        #2196f3 75%,
-        #42a5f5 75%,
-        #42a5f5
-    );
-    background-size: 40px 40px;
-    border-radius: 5px 0 0 5px;
-    box-shadow: 0px 5px #1976d2;
-    height: 20px;
-}
-
-.bar-wrapper {
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    box-shadow: 0px 5px #e0e0e0;
-    font-size: 10px;
-    line-height: 15px;
-    text-align: left;
-    width: 100%;
-}
-
 .block {
     padding-bottom: 50px;
     padding-top: 50px;
@@ -278,20 +250,6 @@ main {
 
 .inline { display: inline; }
 
-.labeled-bar {
-    width: 100%;
-    display: inline-block;
-    margin: 0 6px;
-    vertical-align: middle;
-}
-
-.logo {
-    width: 60px;
-    margin-right: 16px;
-    margin-top: 16px;
-    min-height: 80px;
-}
-
 .popup {
     background-color: #424242;
     border-radius: 2px;
@@ -323,13 +281,6 @@ main {
 .portrait {
     border-radius: 50%; max-width: 256px;
 }
-
-.progress {
-    margin-left: 20px;
-    transform: translateZ(0);
-}
-
-.progress-bar { background-color: #0277Bd; }
 
 .remove-margins { margin: 0; }
 
@@ -427,11 +378,6 @@ main {
 }
 
 /* Miscellaneous */
-
-@keyframes bar {
-    0% { background-position: 0; }
-    100% { background-position: 40px; }
-}
 
 @keyframes bounce {
     0% {
