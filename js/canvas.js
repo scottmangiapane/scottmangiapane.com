@@ -45,7 +45,7 @@ function frame() {
     if ((now - lastRendered) > (1000 / maxFps)) {
         clearFrame();
         drawBinary();
-        offset = (offset + 1) % width;
+        offset = (offset + 1) % height;
         lastRendered = now;
     }
 }
@@ -63,14 +63,14 @@ function drawBinary() {
         alpha += 0.01;
     }
 
-    for (let y = 0; y <= height / fontSize; y++) {
+    for (let y = 0; y <= height / fontSize * 3 / 4; y++) {
         for (let x = 0; x < width / fontSize; x++) {
             ctx.fillStyle = 'black';
-            const drawX = (y % 2)
-                ? mod(offset + (x + y * 8) * fontSize, width)
-                : mod(-offset + (x - y * 8) * fontSize, width);
-            const drawY = y * fontSize;
-            ctx.fillText(binary[x % binary.length], drawX, drawY);
+            const drawX = x * fontSize;
+            const drawY = (x % 2)
+            ? mod(offset + (y + x * 8) * fontSize, height)
+            : mod(-offset + (y - x * 8) * fontSize, height);
+            ctx.fillText(binary[y % binary.length], drawX, drawY);
         }
     }
 }

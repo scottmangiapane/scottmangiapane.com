@@ -17,9 +17,9 @@
 <!-- Piano -->
 <!-- Chess -->
 
-<body>
+<body class="fill">
     <!-- Header -->
-    <header class="align-center fill static">
+    <header class="align-center fill">
         <div class="fill">
             <canvas id="canvas" class="fill"></canvas>
             <div class="center">
@@ -27,95 +27,51 @@
                 <h1 class="align-center shadow-dark-text text-white title">Scott Mangiapane</h1>
             </div>
             <span class="center-items fill scroll-wrapper">
-            <a id="scroll-link" href="#main">
-                <span class="scroll-background-large"></span>
-            <span class="scroll-background-small"></span>
-            <img alt="scroll" class="scroll-icon shadow-dark-text" src="/img/scroll.svg">
-            </a>
+                <a id="scroll-link" href="#main">
+                    <span class="scroll-background-large"></span>
+                <span class="scroll-background-small"></span>
+                <img alt="scroll" class="scroll-icon shadow-dark-text" src="/img/scroll.svg">
+                </a>
             </span>
         </div>
     </header>
     <main id="main">
-        <!-- Piano -->
-        <div id="chess" class="block container">
+        <!-- About me -->
+        <div class="block container">
             <div class="row">
+                <div class="align-center col-md-6">
+                    <img alt="Portrait" class="portrait" src="/img/kayak.png">
+                </div>
                 <div class="col-md-6">
-                    <h1>Some <span class="text-emphasis">Piano</span></h1>
-                    <p>I'm a casual piano player- I don't know theory, and I don't use a metronome so my timing is all over the place. But it's a lot of fun and I've memorized quite a bit of music at this point.</p>
-                    <p>This song is my favorite, "Baba Yetu". It was originally composed by <a href="https://www.youtube.com/@christophertin">@christophertin</a> for the game Civilization IV. The cover I play in the video was arranged by <a href="https://www.youtube.com/@lara6683">@lara6683</a>.
+                    <div class="spacer-vertical"></div>
+                    <h1>A little bit <span class="text-emphasis">about myself</span></h1>
+                    <p>I'm Scott Mangiapane, a software engineer in Chicago, IL. I first started programming on my TI-84 graphing calculator back in high school math class. I've come a long way since then, but have maintained that same enthusiasm. Check out what I've been up to below.
                     </p>
                     <div class="spacer-vertical"></div>
                     <span class="popup-wrapper">
-                        <a class="button" href="https://www.youtube.com/@scottmangiapane/videos" target="_blank">YouTube</a>
+                        <a class="button" href="https://github.com/scottmangiapane" target="_blank">Github</a>
                         <span class="popup">
-                            <p class="remove-margins">See what I've been up to</p>
+                            <p class="remove-margins">Check out my projects</p>
                         </span>
                     </span>
-                    <div class="spacer-vertical"></div>
-                </div>
-                <div class="align-center col-md-6">
-                    <div class="video-player">
-                        <iframe
-                            src="https://www.youtube.com/embed/GjVPqlyDlGA"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
-                            frameborder="0"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            title="Baba Yetu"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Chess -->
-        <div id="chess" class="block tint">
-            <div class="container">
-                <h1><span class="text-emphasis">Chess</span> stats</h1>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="card slide">
-                            <div class="card-color card-color-blue-gray">
-                                <p class="text-emphasis inline text-white">Rapid</p>
-                            </div>
-                            <p>Rating:</p>
-                            <p><span id="chess-rapid-rating">____</span></p>
-                            <p>Last Played:</p>
-                            <p><span id="chess-rapid-last-played">____</span></p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="card slide">
-                            <div class="card-color card-color-blue-gray">
-                                <p class="text-emphasis inline text-white">Blitz</p>
-                            </div>
-                            <p>Rating:</p>
-                            <p><span id="chess-blitz-rating">____</span></p>
-                            <p>Last Played:</p>
-                            <p><span id="chess-blitz-last-played">____</span></p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="card slide">
-                            <div class="card-color card-color-blue-gray">
-                                <p class="text-emphasis inline text-white">Bullet</p>
-                            </div>
-                            <p>Rating:</p>
-                            <p><span id="chess-bullet-rating">____</span></p>
-                            <p>Last Played:</p>
-                            <p><span id="chess-bullet-last-played">____</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="spacer-vertical"></div>
-                <span class="popup-wrapper">
-                    <a class="button" href="https://www.chess.com/member/scottmangiapane" target="_blank">Chess.com</a>
-                    <span class="popup">
-                        <p class="remove-margins">Challenge me to a game</p>
+                    <div class="spacer-horizontal"></div>
+                    <!-- <span class="popup-wrapper">
+                        <a class="button" href="https://github.com/scottmangiapane" target="_blank">LinkedIn</a>
+                        <span class="popup">
+                            <p class="remove-margins">Connect with me on LinkedIn</p>
+                        </span>
+                    </span> -->
+                    <span class="popup-wrapper">
+                        <a class="button" href="https://www.youtube.com/@scottmangiapane/videos" target="_blank">YouTube</a>
+                        <span class="popup">
+                            <p class="remove-margins">I occassionally play piano</p>
+                        </span>
                     </span>
-                </span>
+                </div>
             </div>
         </div>
         <!-- Skills -->
-        <div id="skills" class="block container">
+        <!-- <div id="skills" class="block container">
             <h1>Some of my <span class="text-emphasis">skills</span></h1>
             <div class="row">
                 <div class="center-items col-sm">
@@ -197,7 +153,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Android -->
         <div id="android" class="block tint">
             <div class="container">
@@ -308,43 +264,87 @@
                 </div>
             </div>
         </div>
-        <!-- About me -->
-        <div class="block container">
+        <!-- Piano -->
+        <div id="chess" class="block container">
             <div class="row">
-                <div class="align-center col-md-6">
-                    <img alt="Portrait" class="portrait" src="/img/kayak.png">
-                </div>
                 <div class="col-md-6">
-                    <div class="spacer-vertical"></div>
-                    <h1>A little bit <span class="text-emphasis">about myself</span></h1>
-                    <p>I'm Scott Mangiapane, a software engineer in Chicago, IL. I first started programming on my TI-84 graphing calculator back in high school math class. I've come a long way since then, but have maintained that same enthusiasm. Check out what I've been up to above.
+                    <h1>Some <span class="text-emphasis">Piano</span></h1>
+                    <p>I'm a casual piano player- I don't know theory, and I don't use a metronome so my timing is all over the place. But it's a lot of fun and I've memorized quite a bit of music at this point.</p>
+                    <p>This song is my favorite, "Baba Yetu". It was originally composed by <a href="https://www.youtube.com/@christophertin">@christophertin</a> for the game Civilization IV. The cover I play in the video was arranged by <a href="https://www.youtube.com/@lara6683">@lara6683</a>.
                     </p>
                     <div class="spacer-vertical"></div>
                     <span class="popup-wrapper">
-                        <a class="button" href="https://github.com/scottmangiapane" target="_blank">Github</a>
-                        <span class="popup">
-                            <p class="remove-margins">Check out my projects</p>
-                        </span>
-                    </span>
-                    <div class="spacer-horizontal"></div>
-                    <!-- <span class="popup-wrapper">
-                        <a class="button" href="https://github.com/scottmangiapane" target="_blank">LinkedIn</a>
-                        <span class="popup">
-                            <p class="remove-margins">Connect with me on LinkedIn</p>
-                        </span>
-                    </span> -->
-                    <span class="popup-wrapper">
                         <a class="button" href="https://www.youtube.com/@scottmangiapane/videos" target="_blank">YouTube</a>
                         <span class="popup">
-                            <p class="remove-margins">I occassionally play piano</p>
+                            <p class="remove-margins">See what I've been up to</p>
                         </span>
                     </span>
+                    <div class="spacer-vertical"></div>
                 </div>
+                <div class="align-center col-md-6">
+                    <div class="video-player">
+                        <iframe
+                            src="https://www.youtube.com/embed/GjVPqlyDlGA"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            frameborder="0"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            title="Baba Yetu"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chess -->
+        <div id="chess" class="block tint">
+            <div class="container">
+                <h1><span class="text-emphasis">Chess</span> stats</h1>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card slide">
+                            <div class="card-color card-color-blue-gray">
+                                <p class="text-emphasis inline text-white">Rapid</p>
+                            </div>
+                            <p>Rating:</p>
+                            <p><span id="chess-rapid-rating">____</span></p>
+                            <p>Last Played:</p>
+                            <p><span id="chess-rapid-last-played">____</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card slide">
+                            <div class="card-color card-color-green">
+                                <p class="text-emphasis inline text-white">Blitz</p>
+                            </div>
+                            <p>Rating:</p>
+                            <p><span id="chess-blitz-rating">____</span></p>
+                            <p>Last Played:</p>
+                            <p><span id="chess-blitz-last-played">____</span></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card slide">
+                            <div class="card-color card-color-red">
+                                <p class="text-emphasis inline text-white">Bullet</p>
+                            </div>
+                            <p>Rating:</p>
+                            <p><span id="chess-bullet-rating">____</span></p>
+                            <p>Last Played:</p>
+                            <p><span id="chess-bullet-last-played">____</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-vertical"></div>
+                <span class="popup-wrapper">
+                    <a class="button" href="https://www.chess.com/member/scottmangiapane" target="_blank">Chess.com</a>
+                    <span class="popup">
+                        <p class="remove-margins">Challenge me to a game</p>
+                    </span>
+                </span>
             </div>
         </div>
     </main>
     <!-- Footer -->
-    <footer class="tint">
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-6"></div>
