@@ -167,19 +167,21 @@ main {
 
 .card-color-blue { background-color: #03a9f4; }
 
+.card-color-blue-gray { background-color: #5f7c89; }
+
 .card-color-green { background-color: #4caf50; }
 
 .card-color-indigo { background-color: #3f51b5; }
+
+.card-color-lime { background-color: #cddc39; }
+
+.card-color-orange { background-color: #ff9800; }
 
 .card-color-red { background-color: #f44336; }
 
 .card-color-teal { background-color: #009688; }
 
 .card-color-yellow { background-color: #fdd835; }
-
-.card-color-lime { background-color: #cddc39; }
-
-.card-color-blue-gray { background-color: #5f7c89; }
 
 .center {
     position: absolute;

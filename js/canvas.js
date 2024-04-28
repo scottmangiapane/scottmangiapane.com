@@ -12,6 +12,8 @@ let offset = 0;
 const text = 'Hello, world!';
 const binary = text.split('').map(c => c.charCodeAt(0).toString(2)).join('');
 
+const colors = ['black', '#86981c', '#32a198', '#2e8dd0', '#6d73c2'];
+
 document.onmousemove = (event) => {
     mouse.x = event.clientX * 2;
     mouse.y = event.clientY * 2;
@@ -65,11 +67,11 @@ function drawBinary() {
 
     for (let y = 0; y <= height / fontSize * 3 / 4; y++) {
         for (let x = 0; x < width / fontSize; x++) {
-            ctx.fillStyle = 'black';
             const drawX = x * fontSize;
             const drawY = (x % 2)
             ? mod(offset + (y + x * 8) * fontSize, height)
             : mod(-offset + (y - x * 8) * fontSize, height);
+            ctx.fillStyle = getColor(x, y);
             ctx.fillText(binary[y % binary.length], drawX, drawY);
         }
     }
@@ -77,4 +79,10 @@ function drawBinary() {
 
 function mod(dividend, divisor) {
     return ((dividend % divisor) + divisor) % divisor;
+}
+
+function getColor(a, b) {
+    const entropy = Math.floor(a * b * lastRendered / 1000000);
+    if (entropy % 13 !== 0) return colors[0];
+    return colors[entropy % colors.length];
 }
