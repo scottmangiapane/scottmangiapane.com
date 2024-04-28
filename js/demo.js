@@ -1,6 +1,6 @@
 const groups = [
     ['card-clicks', 'quackcryption', 'calculator-v2'],
-    ['podfish', 'calcnotes-app', 'db-manager'],
+    ['podfish', 'calcnotes', 'db-manager'],
     ['ti-games', 'alphacs', 'ti-terminal']
 ];
 

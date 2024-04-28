@@ -72,6 +72,6 @@ function mod(dividend, divisor) {
 
 function getColor(a, b) {
     const entropy = Math.floor(a * b * lastRendered / 10000000);
-    if (entropy % 31 !== 0) return colors[0];
+    if (entropy % 13 !== 0) return colors[0];
     return colors[entropy % colors.length];
 }
