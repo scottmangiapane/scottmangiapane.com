@@ -210,9 +210,9 @@ main {
 
 .demo-android { width: 84%; }
 
-.demo-js {
-    width: 93%;
-    transform: translate(-50%, -46%);
+.demo-web-app {
+    width: 92.5%;
+    transform: translate(-50%, -59.5%);
 }
 
 .demo-calculator {
@@ -226,7 +226,7 @@ main {
     position: relative;
 }
 
-.demo-wrapper-js {
+.demo-wrapper-web-app {
     width: 75%;
     margin: 0 auto;
     position: relative;
@@ -403,7 +403,7 @@ main {
         margin: 0 auto;
     }
 
-    .demo-wrapper-js {
+    .demo-wrapper-web-app {
         width: 84%;
         margin: 0 auto;
     }
@@ -420,7 +420,7 @@ main {
         margin: 0 auto;
     }
 
-    .demo-wrapper-js {
+    .demo-wrapper-web-app {
         width: 100%;
         margin: 0 auto;
     }

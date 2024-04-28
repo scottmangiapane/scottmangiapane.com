@@ -1,28 +1,17 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-const maxFps = 50000;
+const maxFps = 60;
 let lastRendered = Date.now();
 
 let height, width, alpha, fontSize, drawTimeout;
 
-const mouse = { x: null, y: null };
 let offset = 0;
 
 const text = 'Hello, world!';
 const binary = text.split('').map(c => c.charCodeAt(0).toString(2)).join('');
 
 const colors = ['black', '#86981c', '#32a198', '#2e8dd0', '#6d73c2'];
-
-document.onmousemove = (event) => {
-    mouse.x = event.clientX * 2;
-    mouse.y = event.clientY * 2;
-};
-
-document.onmouseout = () => {
-    mouse.x = null;
-    mouse.y = null;
-};
 
 window.addEventListener('resize', () => {
     clearTimeout(drawTimeout);
@@ -62,7 +51,7 @@ function drawBinary() {
     ctx.globalCompositeOperation = 'source-over';
 
     if (alpha < 1) {
-        alpha += 0.01;
+        alpha += 0.05;
     }
 
     for (let y = 0; y <= height / fontSize * 3 / 4; y++) {
@@ -82,7 +71,7 @@ function mod(dividend, divisor) {
 }
 
 function getColor(a, b) {
-    const entropy = Math.floor(a * b * lastRendered / 1000000);
-    if (entropy % 13 !== 0) return colors[0];
+    const entropy = Math.floor(a * b * lastRendered / 10000000);
+    if (entropy % 31 !== 0) return colors[0];
     return colors[entropy % colors.length];
 }
