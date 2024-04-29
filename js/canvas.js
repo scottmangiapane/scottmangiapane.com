@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 const maxFps = 60;
 let lastRendered = Date.now();
 
-let height, width, alpha, fontSize, drawTimeout;
+let height, width, alpha, fontSize, fragments, drawTimeout;
 
 let offset = 0;
 
@@ -28,6 +28,23 @@ function initialize() {
     width = canvas.width = window.innerWidth * 2;
     alpha = 0;
     fontSize = Math.max(width / 100, 24);
+    loadFragments();
+}
+
+function loadFragments() {
+    fragments = [];
+    for (let x = 0; x < width / fontSize; x++) {
+        const fragment = new OffscreenCanvas(fontSize, height);
+        const fragmentCtx = fragment.getContext('2d');
+        fragmentCtx.font = fontSize + 'px "Roboto Mono"';
+        fragmentCtx.globalCompositeOperation = 'source-over';
+        for (let y = 0; y <= height / fontSize * 3 / 4; y++) {
+            const drawY = y * fontSize;
+            fragmentCtx.fillStyle = getColor(x, y);
+            fragmentCtx.fillText(binary[y % binary.length], 0, drawY);
+        }
+        fragments.push(fragment);
+    }
 }
 
 function frame() {
@@ -46,23 +63,19 @@ function clearFrame() {
 }
 
 function drawBinary() {
-    ctx.font = fontSize + 'px "Roboto Mono"';
     ctx.globalAlpha = alpha;
-    ctx.globalCompositeOperation = 'source-over';
 
     if (alpha < 1) {
         alpha += 0.05;
     }
 
-    for (let y = 0; y <= height / fontSize * 3 / 4; y++) {
-        for (let x = 0; x < width / fontSize; x++) {
-            const drawX = x * fontSize;
-            const drawY = (x % 2)
-            ? mod(offset + (y + x * 8) * fontSize, height)
-            : mod(-offset + (y - x * 8) * fontSize, height);
-            ctx.fillStyle = getColor(x, y);
-            ctx.fillText(binary[y % binary.length], drawX, drawY);
-        }
+    for (let i = 0; i < fragments.length; i++) {
+        const drawX = i * fontSize;
+        const drawY = (i % 2)
+            ? mod(drawX * 8 + offset, height)
+            : mod(drawX * 8 - offset, height);
+        ctx.drawImage(fragments[i], drawX, drawY);
+        ctx.drawImage(fragments[i], drawX, drawY - height);
     }
 }
 
