@@ -1,3 +1,13 @@
+/* Palette */
+
+:root {
+    --theme: #2196f3;
+    --theme-accent: #424242;
+    --theme-dark: #1976d2;
+}
+
+/* Resets */
+
 /* Resets */
 
 a, a:active, a:focus, a:hover, a:visited { text-decoration:none; }
@@ -19,6 +29,16 @@ a, button, li, h1, h2, h3, h4, h5, h6, input, label, p {
 }
 
 a, button, li, input, label, p { font-size: 1em; }
+
+a {
+    color: var(--theme);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--theme);
+    text-decoration: underline;
+}
 
 h1 {
     font-family: 'Roboto Condensed', sans-serif;
@@ -76,7 +96,7 @@ main {
 .bounce { animation: bounce 1s; }
 
 .button, .button:focus:not(:active) {
-    background-color: #2196f3;
+    background-color: var(--theme);
     border-radius: 2px;
     color: white;
     font-family: inherit;
@@ -87,13 +107,13 @@ main {
 }
 
 .button:active {
-    background-color: #1976D2;
+    background-color: var(--theme-dark);
     color: white;
     text-decoration: none;
 }
 
 .button:hover:not(:active) {
-    background-color: #1976D2;
+    background-color: var(--theme-dark);
     color: white;
     text-decoration: none;
 }
@@ -114,7 +134,7 @@ main {
 }
 
 .card-header {
-    background-color: #424242;
+    background-color: var(--theme-accent);
     border-radius: 2px 2px 0 0;
     margin: -14px -14px 14px -14px;
     padding: 16px;
@@ -183,7 +203,7 @@ main {
 .fill-x { width: 100%; }
 
 .popup {
-    background-color: #424242;
+    background-color: var(--theme-accent);
     border-radius: 2px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.10), 0 3px 3px rgba(0, 0, 0, 0.22);
     display: inline-block;
