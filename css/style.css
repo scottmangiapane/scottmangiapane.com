@@ -20,25 +20,12 @@ a, button, li, h1, h2, h3, h4, h5, h6, input, label, p {
 
 a, button, li, input, label, p { font-size: 1em; }
 
-/* a, li {
-    font-family: inherit;
-    line-height: inherit;
-    margin: inherit;
-} */
-
 h1 {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
 }
 
 p { color: #727272; }
-
-/* p {
-    color: #767676;
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0 0 10px;
-} */
 
 /* Element selectors */
 
@@ -49,25 +36,9 @@ p { color: #727272; }
     position: relative;
 }
 
-body, footer, header { background-color: white; }
+body, footer { background-color: white; }
 
 footer { padding: 35px 0; }
-/*
-h1 {
-    font-size: 36px;
-}
-
-h1, h2, h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: inherit;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-    line-height: 1.1;
-} */
 
 header {
     background: #022b36;
@@ -95,25 +66,12 @@ main {
 
 .align-right { text-align: right; }
 
-.android {
-    width: 90%;
-    display: inline-block;
-}
-
-.badge {
-    background: none;
-    display: inline-block;
-    font-size: 12px;
-    padding: 3px 7px;
-    text-align: center;
-    vertical-align: middle;
-    width: 6em;
-}
-
 .block {
     padding-bottom: 50px;
     padding-top: 50px;
 }
+
+.block:nth-child(even) { background-color: #f8f8f8; }
 
 .bounce { animation: bounce 1s; }
 
@@ -121,7 +79,6 @@ main {
     background-color: #2196f3;
     border-radius: 2px;
     color: white;
-    display: inline-block;
     font-family: inherit;
     font-weight: 500;
     padding: 14px;
@@ -144,14 +101,11 @@ main {
 .card {
     background-color: white;
     border-radius: 2px;
-    display: inline-block;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin: 12px 0;
     padding: 14px;
     text-align: center;
     transform-style: preserve-3d;
     transition: all .2s ease-in-out;
-    width: 100%;
 }
 
 .card:hover {
@@ -159,31 +113,19 @@ main {
     transform: scale(1.01);
 }
 
-.card-color {
+.card-header {
+    background-color: #424242;
     border-radius: 2px 2px 0 0;
     margin: -14px -14px 14px -14px;
     padding: 16px;
 }
 
-.card-color-blue { background-color: #03a9f4; }
+.card-header > p {
+    color: white;
+    font-weight: 500;
+}
 
-.card-color-blue-gray { background-color: #5f7c89; }
-
-.card-color-green { background-color: #4caf50; }
-
-.card-color-indigo { background-color: #3f51b5; }
-
-.card-color-lime { background-color: #cddc39; }
-
-.card-color-orange { background-color: #ff9800; }
-
-.card-color-red { background-color: #f44336; }
-
-.card-color-teal { background-color: #009688; }
-
-.card-color-yellow { background-color: #fdd835; }
-
-.center {
+.center-self {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -196,61 +138,49 @@ main {
     justify-content: center;
 }
 
-.col-center {
-    display: inline-block;
-    float: none;
-    vertical-align: middle;
-}
-
 .demo {
+    left: 50%;
     opacity: 0;
     position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 20;
 }
 
-.demo-android { width: 84%; }
-
-.demo-web-app {
-    width: 92.5%;
-    transform: translate(-50%, -59.5%);
+.demo-android {
+    width: 92%;
 }
 
 .demo-calculator {
-    width: 60%;
-    transform: translate(-50%, -202%);
-}
-
-.demo-wrapper-android {
     width: 65%;
-    margin: 0 auto;
-    position: relative;
+    transform: translate(-50%, -203%);
 }
 
-.demo-wrapper-web-app {
-    width: 75%;
-    margin: 0 auto;
-    position: relative;
+.demo-web-app {
+    width: 98.4%;
+    transform: translate(-50%, -46.7%);
 }
 
-.demo-wrapper-calculator {
-    width: 63%;
-    margin: 0 auto;
-    position: relative;
-}
+.device-wrapper { margin: 0 auto; }
 
-.device {
-    margin: 12px 0;
-    z-index: 10;
-}
+.demo-wrapper-android { width: 65%; }
 
-.emoji { height: 20px; }
+.demo-wrapper-calculator { width: 63%; }
+
+.demo-wrapper-web-app { width: 75%; }
+
+.description-cards {
+    width: 340px;
+    flex-basis: auto;
+    flex-grow: unset;
+}
 
 .fill {
     width: 100%;
     height: 100%;
 }
 
-.inline { display: inline; }
+.fill-x { width: 100%; }
 
 .popup {
     background-color: #424242;
@@ -281,15 +211,8 @@ main {
 }
 
 .portrait {
-    border-radius: 50%; max-width: 256px;
-}
-
-.remove-margins { margin: 0; }
-
-.row-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    border-radius: 50%;
+    max-width: 256px;
 }
 
 .scroll-background-small, .scroll-background-large {
@@ -335,19 +258,6 @@ main {
 
 .shadow-dark-text { text-shadow: 0 0 25px rgba(0, 0, 0, 0.28), 0 0 20px rgba(0, 0, 0, 0.52); }
 
-.spacer-horizontal {
-    display: inline;
-    margin-left: 15px;
-}
-
-.spacer-vertical {
-    width: 0;
-    height: 0;
-    margin-top: 30px;
-}
-
-.stretch { width: 100%; }
-
 .text-emphasis {
     color: inherit;
     font-family: inherit;
@@ -356,10 +266,9 @@ main {
 
 .text-white { color: white; }
 
-.tint { background-color: #f8f8f8; }
-
 .title {
-    font-size: 95px;
+    color: white;
+    font-size: 72px;
     font-weight: 500;
 }
 
@@ -379,7 +288,7 @@ main {
     width: 100%;
 }
 
-/* Miscellaneous */
+/* Keyframes */
 
 @keyframes bounce {
     0% {
@@ -395,62 +304,36 @@ main {
     }
 }
 
-@media (max-width: 1199px) {
-    .android { width: 100%; }
+/* @Media */
 
-    .demo-wrapper-android {
-        width: 78%;
-        margin: 0 auto;
-    }
-
-    .demo-wrapper-web-app {
-        width: 84%;
-        margin: 0 auto;
-    }
-
-    .demo-wrapper-calculator {
-        width: 76%;
-        margin: 0 auto;
-    }
+@media (max-width: 320px) {
+    .title { font-size: 42px; }
 }
 
-@media (max-width: 991px) {
-    .demo-wrapper-android {
-        width: 100%;
-        margin: 0 auto;
+@media only screen and (max-width: 575px) {
+    .button {
+        display: block;
+        text-align: center;
+        width: calc(100% - 28px);
     }
 
-    .demo-wrapper-web-app {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .demo-wrapper-calculator {
-        width: 99%;
-        margin: 0 auto;
-    }
-
-    .title { font-size: 80px; }
+    .portrait { max-width: 192px; }
 }
 
-@media (max-width: 767px) {
-    footer p { text-align: center; }
+@media only screen and (max-width: 767px) {
 
     footer .align-right { text-align: center; }
-
-    .android { width: 50%; }
 
     .card:hover {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         transform: scale(1);
     }
 
-    .container { max-width: 500px; }
+    .description-cards { width: 100%; }
 
-    .popup {
-        left: 0;
-        right: auto;
-    }
+    .popup { display: none; }
+
+    .scroll-background-small, .scroll-background-large { display: none; }
 
     .scroll-wrapper {
         width: 2em;
@@ -458,28 +341,5 @@ main {
         bottom: 40px;
     }
 
-    .slide { opacity: 1; }
-
-    .title { font-size: 58px; }
-}
-
-@media (max-width: 543px) {
-    .button {
-        width: 100%;
-        text-align: center;
-    }
-
-    .button:hover:not(:active) {
-        background-color: #2196f3;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transform: scale(1);
-    }
-
-    .popup { display: none; }
-
-    .scroll-background-small, .scroll-background-large { display: none; }
-}
-
-@media (max-width: 320px) {
     .title { font-size: 48px; }
 }
