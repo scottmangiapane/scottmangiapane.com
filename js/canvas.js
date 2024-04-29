@@ -1,7 +1,7 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-const maxFps = 60;
+const maxFps = 45;
 let lastRendered = Date.now();
 
 let height, width, alpha, fontSize, fragments, drawTimeout;
@@ -72,8 +72,8 @@ function drawBinary() {
     for (let i = 0; i < fragments.length; i++) {
         const drawX = i * fontSize;
         const drawY = (i % 2)
-            ? mod(drawX * 8 + offset, height)
-            : mod(drawX * 8 - offset, height);
+            ? mod(drawX * 8 + (i % 3 + 1) * offset, height)
+            : mod(drawX * 8 - (i % 3 + 1) * offset, height);
         ctx.drawImage(fragments[i], drawX, drawY);
         ctx.drawImage(fragments[i], drawX, drawY - height);
     }
