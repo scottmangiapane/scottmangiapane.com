@@ -19,7 +19,7 @@ html, body, div, form, h1, h2, h3, h4, h5, h6, a, p, li, button {
 
 /* Font selectors */
 
-a, button, li, h1, h2, h3, h4, h5, h6, input, label, p {
+a, button, li, h1, h2, h3, h4, h5, h6, input, label, p, span {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     color: inherit;
@@ -99,6 +99,7 @@ main {
     background-color: var(--theme);
     border-radius: 2px;
     color: white;
+    display: inline-block;
     font-family: inherit;
     font-weight: 500;
     padding: 14px;
@@ -163,37 +164,31 @@ main {
     opacity: 0;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
     z-index: 20;
 }
 
 .demo-android {
+    transform: translate(-50%, -50%);
     width: 92%;
 }
 
-.demo-calculator {
-    width: 65%;
+.demo-cards {
+    flex-basis: auto;
+    flex-grow: unset;
+    width: 340px;
+}
+
+.demo-ti-84 {
     transform: translate(-50%, -203%);
+    width: 65%;
 }
 
 .demo-web-app {
-    width: 98.4%;
     transform: translate(-50%, -46.7%);
+    width: 98.4%;
 }
 
 .device-wrapper { margin: 0 auto; }
-
-.demo-wrapper-android { width: 65%; }
-
-.demo-wrapper-calculator { width: 63%; }
-
-.demo-wrapper-web-app { width: 75%; }
-
-.description-cards {
-    width: 340px;
-    flex-basis: auto;
-    flex-grow: unset;
-}
 
 .fill {
     width: 100%;
@@ -201,6 +196,8 @@ main {
 }
 
 .fill-x { width: 100%; }
+
+.flex-basis-100 { flex-basis: 100%; }
 
 .popup {
     background-color: var(--theme-accent);
@@ -278,6 +275,8 @@ main {
 
 .shadow-dark-text { text-shadow: 0 0 25px rgba(0, 0, 0, 0.28), 0 0 20px rgba(0, 0, 0, 0.52); }
 
+.strikethrough { text-decoration: line-through; }
+
 .text-emphasis {
     color: inherit;
     font-family: inherit;
@@ -332,7 +331,6 @@ main {
 
 @media only screen and (max-width: 575px) {
     .button {
-        display: block;
         text-align: center;
         width: calc(100% - 28px);
     }
@@ -344,12 +342,12 @@ main {
 
     footer .align-right { text-align: center; }
 
+    .demo-cards { width: 100%; }
+
     .card:hover {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         transform: scale(1);
     }
-
-    .description-cards { width: 100%; }
 
     .popup { display: none; }
 

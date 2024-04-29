@@ -36,6 +36,10 @@
                 <div class="row">
                     <div class="align-center">
                         <img class="portrait" src="/img/kayak.jpg">
+                    </div>
+                    <div>
+                        <h1>A little bit <span class="text-emphasis">about me</span></h1>
+                        <p>I'm Scott Mangiapane, a software engineer in Chicago, IL. I write a lot of code, but I have other hobbies as well... Swimming, tennis, piano, chess, and leathercraft to name a few. Most recently I've been learning the bass guitar.</p>
                         <div class="spacer-vertical"></div>
                         <span class="popup-wrapper">
                             <a class="button" href="https://github.com/scottmangiapane" target="_blank">Github</a>
@@ -51,11 +55,23 @@
                             </span>
                         </span>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- TI 84 -->
+        <div class="block">
+            <div class="container">
+                <div class="device-wrapper row" style="max-width: 700px;">
                     <div>
-                        <h1>A little bit <span class="text-emphasis">about me</span></h1>
-                        <p>I'm Scott Mangiapane, a software engineer in Chicago, IL. This page is primarily a place for me to showcase my personal projects, so it leans heavily on the software-engineering side. But I have other hobbies as well... Swimming, tennis, piano, chess, and leathercraft to name a few. Most recently I've been learning the bass guitar.</p>
                         <h1>My <span class="text-emphasis">engineering</span> journey</h1>
-                        <p>I started programming on my TI-84 graphing calculator back in high school. I didn't have a smartphone at the time, so I made my own versions of popular phone games on the calculator and distributed them to my classmates (to the dismay of my math teachers). I've come a long way since then, but have maintained that same enthusiasm. I've spent the last 5 years as a full-stack engineer at GoDaddy building the API and dashboard for their VPS (virtual private server) product. Most recently I've been improving my Go and AWS skills.</p>
+                        <p>I started programming on my TI-84 graphing calculator back in high school. I didn't have a smartphone at the time, so I made my own versions of popular phone games on my calculator and distributed them to my classmates (to the dismay of my math teachers). I've come a long way since then, but have maintained that same enthusiasm.</p>
+                        <p>I've spent the last <span id="yoe">____</span> as a full-stack engineer at GoDaddy building the API and dashboard for their VPS (virtual private server) product. Most recently I've been improving my Go and AWS skills.</p>
+                    </div>
+                    <div class="hide-sm">
+                        <img src="/img/devices/ti-84.svg">
+                        <video class="demo demo-ti-84" autoplay loop muted style="opacity: 100%;">
+                            <source src="/img/screenshots/ti-games.mp4" type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>
@@ -64,32 +80,32 @@
         <div class="block">
             <div class="container">
                 <div class="device-wrapper row" style="max-width: 900px;">
-                    <div class="col description-cards">
+                    <div class="col demo-cards">
                         <h1><span class="text-emphasis">Web</span> apps</h1>
                         <div id="card-podfish" class="card">
                             <div class="card-header">
                                 <p>Podfish</p>
                             </div>
-                            <p>Podfish is a free, minimal, and self-hostable podcast client. Features a Go backend and React SPA frontend. Currently under active development.</p>
+                            <p><a href="https://github.com/scottmangiapane/podfish" target="_blank">Podfish</a> is a free, minimal, and self-hostable podcast client. It features a Go backend and React SPA frontend. It's currently under active development.</p>
                         </div>
                         <div id="card-calcnotes" class="card">
                             <div class="card-header">
                                 <p>CalcNotes</p>
                             </div>
-                            <p><a class="link" href="https://calcnotes.app/" target="_blank">calcnotes.app</a> has an interface made for desktop computing while also providing advanced features like variables and custom functions.</p>
+                            <p><a href="https://github.com/scottmangiapane/calcnotes.app" target="_blank">CalcNotes</a> has an interface made for desktop computing while also providing advanced features like variables and custom functions. <a class="link" href="https://calcnotes.app/" target="_blank">Try it yourself.</a></p>
                         </div>
                         <div id="card-db-manager" class="card">
                             <div class="card-header">
                                 <p>DB Manager</p>
                             </div>
-                            <p>DB Manager is a cross-platform desktop app that lets users browse the contents of PostgreSQL databases and run custom queries.</p>
+                            <p><a href="https://github.com/scottmangiapane/database-manager" target="_blank">DB Manager</a> is a cross-platform desktop app that lets users browse the contents of PostgreSQL databases and run custom queries. Built with Node.js + Electron.</p>
                         </div>
                     </div>
                     <div class="hide-sm">
                         <img src="/img/devices/browser.svg">
-                        <img id="demo-podfish" class="demo demo-web-app" src="/img/screenshots/browser/podfish.png">
-                        <img id="demo-calcnotes" class="demo demo-web-app" src="/img/screenshots/browser/calcnotes.png">
-                        <img id="demo-db-manager" class="demo demo-web-app" src="/img/screenshots/browser/db-manager.png">
+                        <img id="demo-podfish" class="demo demo-web-app" src="/img/screenshots/podfish.png">
+                        <img id="demo-calcnotes" class="demo demo-web-app" src="/img/screenshots/calcnotes.png">
+                        <img id="demo-db-manager" class="demo demo-web-app" src="/img/screenshots/db-manager.png">
                     </div>
                 </div>
             </div>
@@ -100,78 +116,43 @@
                 <div class="device-wrapper row" style="max-width: 720px;">
                     <div class="hide-sm">
                         <img src="/img/devices/android.svg">
-                        <img id="demo-card-clicks" class="demo demo-android" src="/img/screenshots/android/card-clicks.png">
-                        <img id="demo-quackcryption" class="demo demo-android" src="/img/screenshots/android/quackcryption.png">
-                        <img id="demo-calculator-v2" class="demo demo-android" src="/img/screenshots/android/calculator-v2.png">
+                        <img id="demo-card-clicks" class="demo demo-android" src="/img/screenshots/card-clicks.png">
+                        <img id="demo-calculator-v2" class="demo demo-android" src="/img/screenshots/calculator-v2.png">
                     </div>
-                    <div class="col description-cards">
+                    <div class="col demo-cards">
                         <h1><span class="text-emphasis">Android</span> stuff</h1>
                         <div id="card-card-clicks" class="card">
                             <div class="card-header">
                                 <p>Card Clicks</p>
                             </div>
-                            <p>Card Clicks is a fun and challenging card game in which players find three cards where each trait (color, shape, fill, or number) is all different or all the same.</p>
-                        </div>
-                        <div id="card-quackcryption" class="card">
-                            <div class="card-header">
-                                <p>Quackcryption</p>
-                            </div>
-                            <p>Quackcryption uses AES encryption to turn standard text into an encrypted string. It won the prize for Best Developer Tool at SpartaHack 2016. It's "unquackable"!</p>
+                            <p><a href="https://github.com/scottmangiapane/card-clicks" target="_blank">Card Clicks</a> is <span class="strikethrough">copyright-safe rip-off of Set</span> a fun and challenging card game where players find sets of three cards as fast as they can before the timer runs out.</p>
                         </div>
                         <div id="card-calculator-v2" class="card">
                             <div class="card-header">
                                 <p>Calculator v2</p>
                             </div>
-                            <p>Calculator v2 is an advanced calculator with functions such as trigonometry, logs, factorials, and more while still maintaining a simple and easy to use interface.</p>
+                            <p><a href="https://github.com/scottmangiapane/calculator-v2" target="_blank">Calculator v2</a> supports trigonometry, logs, factorials, nested expressions, and more. Notably, it parses and executes expressions itself rather than relying on a library.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- TI 84 -->
-        <div class="block">
-            <div class="container">
-                <div class="device-wrapper row" style="max-width: 700px;">
-                    <div class="col description-cards">
-                        <h1><span class="text-emphasis">TI 84</span> programs</h1>
-                        <div id="card-ti-games" class="card">
-                            <div class="card-header">
-                                <p>TI Games</p>
-                            </div>
-                            <p>Wouldn't it be great if you could play your favorite smartphone games on your graphing calculator? Now you can, and math class will never be boring again.</p>
-                        </div>
-                        <div id="card-alphacs" class="card">
-                            <div class="card-header">
-                                <p>AlphaCS</p>
-                            </div>
-                            <p>AlphaCS integrates with zStart to serve as a program launcher. It edits the Virtual Allocation Table to unlock hidden features such as hiding and locking programs.</p>
-                        </div>
-                        <div id="card-ti-terminal" class="card">
-                            <div class="card-header">
-                                <p>TI Terminal</p>
-                            </div>
-                            <p>A full program manager with a command prompt user interface. It includes many useful commands like checking the battery status and toggling TI-OS lowercase.</p>
-                        </div>
-                    </div>
-                    <div class="hide-sm">
-                        <img src="/img/devices/calculator.svg">
-                        <video id="demo-ti-games" class="demo demo-calculator" autoplay loop muted>
-                            <source src="/img/screenshots/calculator/ti-games.mp4" type="video/mp4" />
-                        </video>
-                        <video id="demo-alphacs" class="demo demo-calculator" autoplay loop muted>
-                            <source src="/img/screenshots/calculator/alphacs.mp4" type="video/mp4" />
-                        </video>
-                        <video id="demo-ti-terminal" class="demo demo-calculator" autoplay loop muted>
-                            <source src="/img/screenshots/calculator/ti-terminal.mp4" type="video/mp4" />
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- Piano -->
         <div class="block">
             <div class="container">
                 <div class="row">
+                    <div>
+                        <div class="video-player">
+                            <iframe
+                                src="https://www.youtube.com/embed/GjVPqlyDlGA"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                frameborder="0"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                title="Baba Yetu"></iframe>
+                        </div>
+                    </div>
                     <div>
                         <h1>Some <span class="text-emphasis">piano</span></h1>
                         <p>I'm a casual piano player- I don't know theory, and I don't use a metronome so my timing is all over the place. But it's a lot of fun and I've memorized quite a bit of music at this point.</p>
@@ -184,60 +165,54 @@
                             </span>
                         </span>
                     </div>
-                    <div>
-                        <div class="video-player">
-                            <iframe
-                                src="https://www.youtube.com/embed/GjVPqlyDlGA"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen
-                                frameborder="0"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                title="Baba Yetu"></iframe>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
         <!-- Chess -->
         <div class="block">
             <div class="container">
-                <h1>Current <span class="text-emphasis">chess</span> stats</h1>
                 <div class="row">
-                    <div class="card">
-                        <div class="card-header">
-                            <p>Rapid</p>
-                        </div>
-                        <p>Rating:</p>
-                        <p><span id="chess-rapid-rating">____</span></p>
-                        <p>Last Played:</p>
-                        <p><span id="chess-rapid-last-played">____</span></p>
+                    <div>
+                        <h1>Current <span class="text-emphasis">chess</span> stats</h1>
+                        <p>I grew up playing chess with my dad, but only started taking it seriously in the last couple years. There's something beautiful about how a few pieces following simple rules can come together to create something incredibly complex.</p>
+                        <div class="spacer-vertical"></div>
+                        <span class="popup-wrapper">
+                            <a class="button" href="https://www.chess.com/member/scottmangiapane" target="_blank">Chess.com</a>
+                            <span class="popup">
+                                <p>Challenge me to a game</p>
+                            </span>
+                        </span>
                     </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <p>Blitz</p>
+                    <div class="row">
+                        <div class="card flex-basis-100">
+                            <div class="card-header">
+                                <p>Rapid</p>
+                            </div>
+                            <p>Rating:</p>
+                            <p><span id="chess-rapid-rating">____</span></p>
+                            <p>Last Played:</p>
+                            <p><span id="chess-rapid-last-played">____</span></p>
                         </div>
-                        <p>Rating:</p>
-                        <p><span id="chess-blitz-rating">____</span></p>
-                        <p>Last Played:</p>
-                        <p><span id="chess-blitz-last-played">____</span></p>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            <p>Bullet</p>
+                        <div class="card">
+                            <div class="card-header">
+                                <p>Blitz</p>
+                            </div>
+                            <p>Rating:</p>
+                            <p><span id="chess-blitz-rating">____</span></p>
+                            <p>Last Played:</p>
+                            <p><span id="chess-blitz-last-played">____</span></p>
                         </div>
-                        <p>Rating:</p>
-                        <p><span id="chess-bullet-rating">____</span></p>
-                        <p>Last Played:</p>
-                        <p><span id="chess-bullet-last-played">____</span></p>
+                        <div class="card">
+                            <div class="card-header">
+                                <p>Bullet</p>
+                            </div>
+                            <p>Rating:</p>
+                            <p><span id="chess-bullet-rating">____</span></p>
+                            <p>Last Played:</p>
+                            <p><span id="chess-bullet-last-played">____</span></p>
+                        </div>
                     </div>
                 </div>
-                <div class="spacer-vertical"></div>
-                <span class="popup-wrapper">
-                    <a class="button" href="https://www.chess.com/member/scottmangiapane" target="_blank">Chess.com</a>
-                    <span class="popup">
-                        <p>Challenge me to a game</p>
-                    </span>
-                </span>
             </div>
         </div>
     </main>
@@ -249,9 +224,10 @@
     </footer>
     <!-- Custom Scripts -->
     <script src="/js/canvas.js"></script>
-    <script src="/js/chess.js"></script>
     <script src="/js/demo.js"></script>
+    <script src="/js/chess.js"></script>
     <script src="/js/scroll.js"></script>
+    <script src="/js/yoe.js"></script>
 </body>
 
 </html>

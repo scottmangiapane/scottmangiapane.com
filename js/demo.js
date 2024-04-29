@@ -1,7 +1,6 @@
 const groups = [
-    ['card-clicks', 'quackcryption', 'calculator-v2'],
-    ['podfish', 'calcnotes', 'db-manager'],
-    ['ti-games', 'alphacs', 'ti-terminal']
+    ['card-clicks', 'calculator-v2'],
+    ['podfish', 'calcnotes', 'db-manager']
 ];
 
 const duration = 220;
