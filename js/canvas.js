@@ -9,7 +9,10 @@ let height, width, alpha, fontSize, fragments, drawTimeout;
 let offset = 0;
 
 const text = 'Hello, world!';
-const binary = text.split('').map(c => c.charCodeAt(0).toString(2)).join('');
+const binary = text
+    .split('')
+    .map(c => c.charCodeAt(0).toString(2).padStart(8, '0'))
+    .join('')
 
 const colors = ['black', '#86981c', '#32a198', '#2e8dd0', '#6d73c2'];
 
@@ -38,8 +41,8 @@ function loadFragments() {
         const fragmentCtx = fragment.getContext('2d');
         fragmentCtx.font = fontSize + 'px "Roboto Mono"';
         fragmentCtx.globalCompositeOperation = 'source-over';
-        for (let y = 0; y <= height / fontSize * 3 / 4; y++) {
-            const drawY = y * fontSize;
+        for (let y = 0; y < height / fontSize * 3 / 4; y++) {
+            const drawY = y * fontSize + fontSize;
             fragmentCtx.fillStyle = getColor(x, y);
             fragmentCtx.fillText(binary[y % binary.length], 0, drawY);
         }
