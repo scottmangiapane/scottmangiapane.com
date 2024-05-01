@@ -4,8 +4,9 @@ const ctx = canvas.getContext('2d');
 const maxFps = 45;
 let lastRendered = Date.now();
 
-let height, width, alpha, fontSize, fragments, drawTimeout;
+let height, width, fontSize, fragments, drawTimeout;
 
+alpha = 0;
 let offset = 0;
 
 const text = 'Hello, world!';
@@ -29,7 +30,6 @@ window.addEventListener('load', () => {
 function initialize() {
     height = canvas.height = window.innerHeight * 2;
     width = canvas.width = window.innerWidth * 2;
-    alpha = 0;
     fontSize = Math.max(width / 100, 24);
     loadFragments();
 }
