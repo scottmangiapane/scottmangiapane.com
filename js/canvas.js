@@ -22,10 +22,8 @@ window.addEventListener('resize', () => {
     drawTimeout = setTimeout(initialize, 100);
 });
 
-window.addEventListener('load', () => {
-    initialize();
-    requestAnimationFrame(frame);
-});
+initialize();
+requestAnimationFrame(frame);
 
 function initialize() {
     height = canvas.height = window.innerHeight * 2;
@@ -48,6 +46,12 @@ function loadFragments() {
         }
         fragments.push(fragment);
     }
+}
+
+function getColor(a, b) {
+    const entropy = a ^ b;
+    if (entropy % 13 !== 0) return colors[0];
+    return colors[entropy % colors.length];
 }
 
 function frame() {
@@ -84,10 +88,4 @@ function drawBinary() {
 
 function mod(dividend, divisor) {
     return ((dividend % divisor) + divisor) % divisor;
-}
-
-function getColor(a, b) {
-    const entropy = a ^ b;
-    if (entropy % 13 !== 0) return colors[0];
-    return colors[entropy % colors.length];
 }

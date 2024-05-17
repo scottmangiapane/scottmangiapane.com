@@ -9,21 +9,13 @@ function fade(object, opacity) {
     object.animate({ opacity }, { duration: duration, queue: false });
 }
 
-function getCard(name) {
-    return document.getElementById('card-' + name);
-}
+const getCard = (name) => document.getElementById('card-' + name);
 
-function getDemo(name) {
-    return document.getElementById('demo-' + name);
-}
+const getDemo = (name) => document.getElementById('demo-' + name);
 
 window.addEventListener('load', () => {
     for (const group of groups) {
-        const demo = getDemo(group[0]);
-        demo.style.opacity = 1;
-    }
-
-    for (group of groups) {
+        getDemo(group[0]).style.opacity = 1;
         for (const name of group) {
             const card = getCard(name);
             const demo = getDemo(name);
