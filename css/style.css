@@ -23,9 +23,23 @@ a, button, li, h1, h2, h3, h4, h5, h6, input, label, p, span {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     color: inherit;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.5em;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "XOPQ" 96,
+        "XTRA" 468,
+        "YOPQ" 79,
+        "YTAS" 750,
+        "YTDE" -203,
+        "YTFI" 738,
+        "YTLC" 514,
+        "YTUC" 712;
     font-weight: 400;
+    line-height: 1.5em;
 }
 
 a, button, li, input, label, p { font-size: 1em; }
@@ -41,7 +55,9 @@ a:hover {
 }
 
 h1 {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-weight: 300;
 }
 
@@ -51,8 +67,6 @@ p { color: #727272; }
 
 * {
     color: #444;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
     position: relative;
 }
 
@@ -277,10 +291,10 @@ main {
 
 .strikethrough { text-decoration: line-through; }
 
-.text-emphasis {
+.text-weight-400 {
     color: inherit;
     font-family: inherit;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .text-white { color: white; }

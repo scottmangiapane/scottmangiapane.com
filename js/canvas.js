@@ -30,6 +30,7 @@ function initialize() {
     width = canvas.width = window.innerWidth * 2;
     fontSize = Math.max(width / 100, 24);
     loadFragments();
+    document.fonts.load(fontSize + 'px "Roboto Mono"').then(loadFragments);
 }
 
 function loadFragments() {
