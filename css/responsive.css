@@ -30,15 +30,11 @@
 }
 
 .spacer-horizontal {
-    display: inline;
+    display: inline-block;
     margin-left: calc(var(--base-gap) / 2);
 }
 
-.spacer-vertical {
-    width: 0;
-    height: 0;
-    margin-top: var(--base-gap);
-}
+.spacer-vertical { margin-top: var(--base-gap); }
 
 /* Item is lg */
 
@@ -76,8 +72,6 @@
     .hide-xs { display: none; }
 
     .row { gap: calc(var(--base-gap) / 2); }
-
-    .spacer-horizontal { margin-left: calc(var(--base-gap) / 2); }
 
     .spacer-vertical { margin-top: calc(var(--base-gap) / 2); }
 }
