@@ -213,6 +213,8 @@ main {
 
 .flex-basis-100 { flex-basis: 100%; }
 
+.mt-1 { margin-top: 8px; }
+
 .popup {
     background-color: var(--theme-accent);
     border-radius: 2px;
