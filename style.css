@@ -158,7 +158,7 @@ main {
 .vignette-overlay {
     background: radial-gradient(
         circle at center,
-        rgba(0,0,0,0) 40vmin,
+        #022b3630 35vmin,
         rgba(0,0,0,0.025) 60vmin,
         rgba(0,0,0,0.3) 120vmin
     );
