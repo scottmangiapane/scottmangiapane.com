@@ -155,9 +155,20 @@ main {
     font-weight: 500;
 }
 
+.vignette-overlay {
+    background: radial-gradient(
+        circle at center,
+        rgba(0,0,0,0) 40vmin,
+        rgba(0,0,0,0.025) 60vmin,
+        rgba(0,0,0,0.3) 120vmin
+    );
+    inset: 0;
+    position: absolute;
+}
+
 /* Keyframes */
 
-/* Vertical @Media */
+/* Keyframes - Vertical @Media */
 
 @media only screen and (max-height: 575px) {
     header .portrait { display: none; }
@@ -169,7 +180,7 @@ main {
     .title { font-size: 48px; }
 }
 
-/* Horizontal @Media */
+/* Keyframes - Horizontal @Media */
 
 @media (max-width: 320px) {
     .title { font-size: 42px; }
